@@ -15,7 +15,6 @@ import {
 import { addToWishlist } from "../services/wishlistServices/addToWishlist";
 import { useWishlist } from "./wishlistContext";
 import { cartReducer } from "../constants/reducers/cartReducer";
-// import { cartReducer } from "../reducers/cartReducer";
 import { toast } from "react-hot-toast";
 import { getPrice, getDiscountInPrice } from "../utils/cartPrice";
 

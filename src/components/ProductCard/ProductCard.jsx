@@ -1,3 +1,79 @@
+// import "./ProductCard.css";
+// import { Link } from "react-router-dom";
+// import { useWishlist } from "../../contexts/wishlistContext";
+// import { useCart } from "../../contexts/cartContext";
+// import { useAuth } from "../../contexts/authContext";
+
+// const ProductCard = ({ product }) => {
+//   const { _id, title, price, discount, discountedPrice, image, inStock, id } =
+//     product;
+//   const {
+//     wishlistState,
+//     toggleWishlist,
+//     loading: wishlistLoading,
+//   } = useWishlist();
+//   const { cartState, addToCartHandler, loading: cartLoading } = useCart();
+//   const { isAuth, navigate } = useAuth();
+
+//   const itemInWishlist = wishlistState.find((item) => item._id === _id);
+//   const itemInCart = cartState.find((item) => item._id === _id);
+
+//   return (
+//     <div
+//       className={`card-wrapper basic-card card-w-dismiss ${
+//         !inStock ? "card-w-overlay" : null
+//       }`}
+//     >
+//       <div className={`${!inStock ? "overlay-bg" : null}`}>
+//         <Link to={`/products/${id}`}>
+//           <img src={image} className="card-img" alt={title} />
+//         </Link>
+
+//         <div className="card-dismiss">
+//           <button
+//             onClick={() => toggleWishlist(product)}
+//             disabled={wishlistLoading}
+//           >
+//             <i
+//               className={
+//                 isAuth && itemInWishlist ? "fa fa-heart" : "fa fa-heart-o"
+//               }
+//             ></i>
+//           </button>
+//         </div>
+
+//         <Link to={`/products/${id}`} className="card-heading" title={title}>
+//           {title}
+//         </Link>
+//       </div>
+
+//       {!inStock ? <div className="overlay-text">Out of Stock</div> : null}
+
+//       <div className={`card-content ${!inStock ? "overlay-bg" : null}`}>
+//         <div className="product-price">
+//           <div className="price">&#8377; {discountedPrice}</div>
+//           <div className="previous-price">&#8377; {price}</div>
+//           <div className="discount">{discount}% off</div>
+//         </div>
+//       </div>
+
+//       <div className={`card-action ${!inStock ? "overlay-bg" : null}`}>
+//         <button
+//           className="btn btn-primary cart-button"
+//           onClick={() =>
+//             isAuth && itemInCart ? navigate("/cart") : addToCartHandler(product)
+//           }
+//           disabled={cartLoading}
+//         >
+//           {isAuth && itemInCart ? "Go To Cart" : "Add To Cart"}
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export { ProductCard };
+
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../contexts/wishlistContext";
@@ -20,55 +96,117 @@ const ProductCard = ({ product }) => {
 
   return (
     <div
-      className={`card-wrapper basic-card card-w-dismiss ${
-        !inStock ? "card-w-overlay" : null
+      className={`border border-blue-600 bg-transparent shadow-md ${
+        !inStock ? "bg-gray-200" : ""
       }`}
     >
-      <div className={`${!inStock ? "overlay-bg" : null}`}>
-        <Link to={`/products/${id}`}>
-          <img src={image} className="card-img" alt={title} />
-        </Link>
+      <Link to={`/products/${id}`}>
+        <img src={image} className="w-full h-64 object-contain" alt={title} />
+      </Link>
 
-        <div className="card-dismiss">
-          <button
-            onClick={() => toggleWishlist(product)}
-            disabled={wishlistLoading}
-          >
-            <i
-              className={
-                isAuth && itemInWishlist ? "fa fa-heart" : "fa fa-heart-o"
-              }
-            ></i>
-          </button>
-        </div>
+      <div className={`${!inStock ? "bg-gray-200" : ""}`}>
+        <button
+          onClick={() => toggleWishlist(product)}
+          disabled={wishlistLoading}
+          className="absolute top-2 right-2 p-2 rounded-full"
+        >
+          <i
+            className={`${
+              isAuth && itemInWishlist ? "fas fa-heart" : "far fa-heart"
+            }`}
+          ></i>
+        </button>
 
-        <Link to={`/products/${id}`} className="card-heading" title={title}>
+        <Link
+          to={`/products/${id}`}
+          className="block px-2 py-1 text-sm font-medium truncate"
+          title={title}
+        >
           {title}
         </Link>
       </div>
 
-      {!inStock ? <div className="overlay-text">Out of Stock</div> : null}
+      {!inStock ? (
+        <div className="text-center text-sm">Out of Stock</div>
+      ) : null}
 
-      <div className={`card-content ${!inStock ? "overlay-bg" : null}`}>
-        <div className="product-price">
-          <div className="price">&#8377; {discountedPrice}</div>
-          <div className="previous-price">&#8377; {price}</div>
-          <div className="discount">{discount}% off</div>
+      <div className={`px-2 py-1 ${!inStock ? "bg-gray-200" : ""}`}>
+        <div className="flex items-center">
+          <div className="text-lg font-medium">₹ {discountedPrice}</div>
+          <div className="ml-2 text-sm text-gray-500 line-through">
+            ₹ {price}
+          </div>
+          <div className="ml-2 text-sm text-green-600">{discount}% off</div>
         </div>
       </div>
 
-      <div className={`card-action ${!inStock ? "overlay-bg" : null}`}>
+      <div className={`px-2 py-1 ${!inStock ? "bg-gray-200" : ""}`}>
         <button
-          className="btn btn-primary cart-button"
-          onClick={() =>
-            isAuth && itemInCart ? navigate("/cart") : addToCartHandler(product)
+          className={`w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 ${
+            !inStock ? "cursor-not-allowed" : ""
+          }`}
+          onClick={
+            () => (itemInCart ? navigate("/cart") : addToCartHandler(product))
+            // isAuth && itemInCart ? navigate("/cart") : addToCartHandler(product)
           }
-          disabled={cartLoading}
+          disabled={cartLoading || !inStock}
         >
-          {isAuth && itemInCart ? "Go To Cart" : "Add To Cart"}
+          {itemInCart ? "Go To Cart" : "Add To Cart"}
+          {/* {isAuth && itemInCart ? "Go To Cart" : "Add To Cart"} */}
         </button>
       </div>
     </div>
+
+    // <div
+    //   className={`card-wrapper basic-card card-w-dismiss ${
+    //     !inStock ? "card-w-overlay" : null
+    //   }`}
+    // >
+    //   <div className={`${!inStock ? "overlay-bg" : null}`}>
+    //     <Link to={`/products/${id}`}>
+    //       <img src={image} className="card-img" alt={title} />
+    //     </Link>
+
+    //     <div className="card-dismiss">
+    //       <button
+    //         onClick={() => toggleWishlist(product)}
+    //         disabled={wishlistLoading}
+    //       >
+    //         <i
+    //           className={
+    //             isAuth && itemInWishlist ? "fa fa-heart" : "fa fa-heart-o"
+    //           }
+    //         ></i>
+    //       </button>
+    //     </div>
+
+    //     <Link to={`/products/${id}`} className="card-heading" title={title}>
+    //       {title}
+    //     </Link>
+    //   </div>
+
+    //   {!inStock ? <div className="overlay-text">Out of Stock</div> : null}
+
+    //   <div className={`card-content ${!inStock ? "overlay-bg" : null}`}>
+    //     <div className="product-price">
+    //       <div className="price">&#8377; {discountedPrice}</div>
+    //       <div className="previous-price">&#8377; {price}</div>
+    //       <div className="discount">{discount}% off</div>
+    //     </div>
+    //   </div>
+
+    //   <div className={`card-action ${!inStock ? "overlay-bg" : null}`}>
+    //     <button
+    //       className="btn btn-primary cart-button"
+    //       onClick={() =>
+    //         isAuth && itemInCart ? navigate("/cart") : addToCartHandler(product)
+    //       }
+    //       disabled={cartLoading}
+    //     >
+    //       {isAuth && itemInCart ? "Go To Cart" : "Add To Cart"}
+    //     </button>
+    //   </div>
+    // </div>
   );
 };
 
