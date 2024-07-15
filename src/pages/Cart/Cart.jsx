@@ -72,6 +72,7 @@ const Cart = () => {
           {cartState.length > 0 ? (
             <section className="grid grid-cols-3 gap-4">
               <div className="col-span-3 md:col-span-2 bg-gray-900 rounded-lg">
+                {/* <div className="col-span-3 md:col-span-2 bg-gray-900 rounded-lg"> */}
                 {cartState.map((cartItem) => (
                   <CartCard product={cartItem} key={cartItem._id} />
                 ))}

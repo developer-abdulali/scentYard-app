@@ -70,7 +70,7 @@ const Footer = () => {
     <footer
       className={`${
         showFilter ? "hidden" : null
-      } flex items-center justify-between`}
+      } flex items-center justify-between overflow-hidden`}
     >
       {/* <div className=""> */}
       <div>

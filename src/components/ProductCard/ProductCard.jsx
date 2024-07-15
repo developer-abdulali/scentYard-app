@@ -1,80 +1,4 @@
 // import "./ProductCard.css";
-// import { Link } from "react-router-dom";
-// import { useWishlist } from "../../contexts/wishlistContext";
-// import { useCart } from "../../contexts/cartContext";
-// import { useAuth } from "../../contexts/authContext";
-
-// const ProductCard = ({ product }) => {
-//   const { _id, title, price, discount, discountedPrice, image, inStock, id } =
-//     product;
-//   const {
-//     wishlistState,
-//     toggleWishlist,
-//     loading: wishlistLoading,
-//   } = useWishlist();
-//   const { cartState, addToCartHandler, loading: cartLoading } = useCart();
-//   const { isAuth, navigate } = useAuth();
-
-//   const itemInWishlist = wishlistState.find((item) => item._id === _id);
-//   const itemInCart = cartState.find((item) => item._id === _id);
-
-//   return (
-//     <div
-//       className={`card-wrapper basic-card card-w-dismiss ${
-//         !inStock ? "card-w-overlay" : null
-//       }`}
-//     >
-//       <div className={`${!inStock ? "overlay-bg" : null}`}>
-//         <Link to={`/products/${id}`}>
-//           <img src={image} className="card-img" alt={title} />
-//         </Link>
-
-//         <div className="card-dismiss">
-//           <button
-//             onClick={() => toggleWishlist(product)}
-//             disabled={wishlistLoading}
-//           >
-//             <i
-//               className={
-//                 isAuth && itemInWishlist ? "fa fa-heart" : "fa fa-heart-o"
-//               }
-//             ></i>
-//           </button>
-//         </div>
-
-//         <Link to={`/products/${id}`} className="card-heading" title={title}>
-//           {title}
-//         </Link>
-//       </div>
-
-//       {!inStock ? <div className="overlay-text">Out of Stock</div> : null}
-
-//       <div className={`card-content ${!inStock ? "overlay-bg" : null}`}>
-//         <div className="product-price">
-//           <div className="price">&#8377; {discountedPrice}</div>
-//           <div className="previous-price">&#8377; {price}</div>
-//           <div className="discount">{discount}% off</div>
-//         </div>
-//       </div>
-
-//       <div className={`card-action ${!inStock ? "overlay-bg" : null}`}>
-//         <button
-//           className="btn btn-primary cart-button"
-//           onClick={() =>
-//             isAuth && itemInCart ? navigate("/cart") : addToCartHandler(product)
-//           }
-//           disabled={cartLoading}
-//         >
-//           {isAuth && itemInCart ? "Go To Cart" : "Add To Cart"}
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export { ProductCard };
-
-import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../contexts/wishlistContext";
 import { useCart } from "../../contexts/cartContext";
@@ -96,7 +20,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div
-      className={`border border-blue-600 bg-transparent shadow-md ${
+      className={`border border-[#436C68] rounded-[10px] bg-transparent shadow-md ${
         !inStock ? "bg-gray-200" : ""
       }`}
     >
@@ -140,7 +64,11 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
 
-      <div className={`px-2 py-1 ${!inStock ? "bg-gray-200" : ""}`}>
+      <div
+        className={`px-2 py-1 ${
+          !inStock ? "bg-gray-200  rounded-b-[10px]" : ""
+        }`}
+      >
         <button
           className={`w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 ${
             !inStock ? "cursor-not-allowed" : ""
@@ -156,57 +84,6 @@ const ProductCard = ({ product }) => {
         </button>
       </div>
     </div>
-
-    // <div
-    //   className={`card-wrapper basic-card card-w-dismiss ${
-    //     !inStock ? "card-w-overlay" : null
-    //   }`}
-    // >
-    //   <div className={`${!inStock ? "overlay-bg" : null}`}>
-    //     <Link to={`/products/${id}`}>
-    //       <img src={image} className="card-img" alt={title} />
-    //     </Link>
-
-    //     <div className="card-dismiss">
-    //       <button
-    //         onClick={() => toggleWishlist(product)}
-    //         disabled={wishlistLoading}
-    //       >
-    //         <i
-    //           className={
-    //             isAuth && itemInWishlist ? "fa fa-heart" : "fa fa-heart-o"
-    //           }
-    //         ></i>
-    //       </button>
-    //     </div>
-
-    //     <Link to={`/products/${id}`} className="card-heading" title={title}>
-    //       {title}
-    //     </Link>
-    //   </div>
-
-    //   {!inStock ? <div className="overlay-text">Out of Stock</div> : null}
-
-    //   <div className={`card-content ${!inStock ? "overlay-bg" : null}`}>
-    //     <div className="product-price">
-    //       <div className="price">&#8377; {discountedPrice}</div>
-    //       <div className="previous-price">&#8377; {price}</div>
-    //       <div className="discount">{discount}% off</div>
-    //     </div>
-    //   </div>
-
-    //   <div className={`card-action ${!inStock ? "overlay-bg" : null}`}>
-    //     <button
-    //       className="btn btn-primary cart-button"
-    //       onClick={() =>
-    //         isAuth && itemInCart ? navigate("/cart") : addToCartHandler(product)
-    //       }
-    //       disabled={cartLoading}
-    //     >
-    //       {isAuth && itemInCart ? "Go To Cart" : "Add To Cart"}
-    //     </button>
-    //   </div>
-    // </div>
   );
 };
 

@@ -36,7 +36,7 @@ const Products = () => {
 
       <section className="main-section">
         <main className="flex-grow flex">
-          <div className="w-72">
+          <div className="lg:w-72">
             <ProductFilters />
           </div>
           <div className="flex-1">

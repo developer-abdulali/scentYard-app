@@ -1,4 +1,76 @@
-import "./AddressList.css";
+// import "./AddressList.css";
+// import { useState } from "react";
+// import { useAddress } from "../../contexts/addressContext";
+// import { AddressModal } from "../AddressModal/AddressModal";
+
+// const AddressList = () => {
+//   const {
+//     addressState: { addresses },
+//     dispatchAddress,
+//     deleteAddressHandler,
+//   } = useAddress();
+
+//   const [showAddrModal, setShowAddrModal] = useState(false);
+
+//   const editAddress = (data) => {
+//     setShowAddrModal(true);
+//     dispatchAddress({ type: "EDIT_INPUT", payload: { data } });
+//   };
+
+//   return (
+//     <div className="address-container">
+//       <button
+//         className="btn btn-primary add-address"
+//         onClick={() => setShowAddrModal(true)}
+//       >
+//         <i className="fa-solid fa-plus"></i>Add address
+//       </button>
+
+//       <div className="address-list">
+//         {addresses?.length ? (
+//           addresses?.map((address) => (
+//             <div key={address._id} className="address">
+//               <p className="name">{address.name}</p>
+//               <p>{address.street},</p>
+//               <p>
+//                 {address.city} - {address.zipcode}
+//               </p>
+//               <p>
+//                 {address.state}, {address.country}
+//               </p>
+//               <p>{address.mobile}</p>
+
+//               <div className="address-action">
+//                 <button
+//                   className="btn outline-primary"
+//                   onClick={() => editAddress(address)}
+//                 >
+//                   Edit
+//                 </button>
+//                 <button
+//                   className="btn outline-danger"
+//                   onClick={() => deleteAddressHandler(address._id)}
+//                 >
+//                   Delete
+//                 </button>
+//               </div>
+//             </div>
+//           ))
+//         ) : (
+//           <p>No address found.</p>
+//         )}
+//       </div>
+//       {showAddrModal ? (
+//         <div className="address-modal">
+//           <AddressModal setShowAddrModal={setShowAddrModal} />
+//         </div>
+//       ) : null}
+//     </div>
+//   );
+// };
+
+// export { AddressList };
+
 import { useState } from "react";
 import { useAddress } from "../../contexts/addressContext";
 import { AddressModal } from "../AddressModal/AddressModal";
@@ -18,19 +90,19 @@ const AddressList = () => {
   };
 
   return (
-    <div className="address-container">
+    <div>
       <button
-        className="btn btn-primary add-address"
+        className="bg-blue-500 text-white px-4 py-2 rounded flex items-center gap-2"
         onClick={() => setShowAddrModal(true)}
       >
-        <i className="fa-solid fa-plus"></i>Add address
+        <i className="fas fa-plus"></i>Add address
       </button>
 
-      <div className="address-list">
+      <div className="space-y-4 mt-4">
         {addresses?.length ? (
           addresses?.map((address) => (
-            <div key={address._id} className="address">
-              <p className="name">{address.name}</p>
+            <div key={address._id} className="border-b border-gray-200 pb-4">
+              <p className="font-bold">{address.name}</p>
               <p>{address.street},</p>
               <p>
                 {address.city} - {address.zipcode}
@@ -40,15 +112,15 @@ const AddressList = () => {
               </p>
               <p>{address.mobile}</p>
 
-              <div className="address-action">
+              <div className="flex gap-2 mt-2">
                 <button
-                  className="btn outline-primary"
+                  className="border border-blue-500 text-blue-500 px-2 py-1 text-sm rounded"
                   onClick={() => editAddress(address)}
                 >
                   Edit
                 </button>
                 <button
-                  className="btn outline-danger"
+                  className="border border-red-500 text-red-500 px-2 py-1 text-sm rounded"
                   onClick={() => deleteAddressHandler(address._id)}
                 >
                   Delete
@@ -61,7 +133,7 @@ const AddressList = () => {
         )}
       </div>
       {showAddrModal ? (
-        <div className="address-modal">
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
           <AddressModal setShowAddrModal={setShowAddrModal} />
         </div>
       ) : null}
