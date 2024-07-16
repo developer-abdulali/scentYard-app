@@ -1,4 +1,3 @@
-import "./Wishlist.css";
 import { Footer } from "../../components/Footer/Footer";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useWishlist } from "../../contexts/wishlistContext";
@@ -9,28 +8,30 @@ const Wishlist = () => {
   const { wishlistState } = useWishlist();
 
   return (
-    <div className="page-wrapper">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="main-section product-container">
-        <section className="wishlist-wrapper">
-          <div className="heading-3">My Wishlist ({wishlistState.length})</div>
+      <section className="flex-grow flex flex-col items-center justify-center">
+        <div className="max-w-[80%] mx-auto">
+          <div className="text-3xl font-bold text-center">
+            My Wishlist ({wishlistState.length})
+          </div>
 
           {wishlistState.length > 0 ? (
-            <section className="product-main">
+            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
               {wishlistState.map((wishlistItem) => (
                 <ProductCard product={wishlistItem} key={wishlistItem._id} />
               ))}
             </section>
           ) : (
-            <div className="text-center">
-              <p>Oops! Your wishlist is empty :(</p>
+            <div className="text-center mt-4">
+              <p>Oops! Your wishlist is empty :</p>
               <Link to="/products" className="text-primary">
                 Start shopping!
               </Link>
             </div>
           )}
-        </section>
+        </div>
       </section>
 
       <Footer />
