@@ -47,7 +47,7 @@ const ApplyCoupon = ({ setShowCouponModal, totalPrice }) => {
   const { coupons, selectedCoupon, setSelectedCoupon } = useCart();
 
   return (
-    <div className="bg-gray-100 rounded-lg p-4">
+    <div className="bg-gray-100 rounded-lg p-4 overflow-hidden">
       <div className="flex justify-between items-center">
         <h3>Apply Coupon</h3>
         <button onClick={() => setShowCouponModal(false)}>

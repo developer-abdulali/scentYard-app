@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div
-      className={`border border-[#436C68] rounded-[10px] bg-transparent shadow-md ${
+      className={`border border-primary rounded-[10px] bg-transparent shadow-md ${
         !inStock ? "bg-gray-200" : ""
       }`}
     >
@@ -70,7 +70,7 @@ const ProductCard = ({ product }) => {
         }`}
       >
         <button
-          className={`w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 ${
+          className={`w-full px-4 py-2 text-white bg-primary rounded-md hover:bg-primary/90 font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 ${
             !inStock ? "cursor-not-allowed" : ""
           }`}
           onClick={

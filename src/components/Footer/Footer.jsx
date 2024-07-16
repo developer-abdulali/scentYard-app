@@ -1,65 +1,3 @@
-// import "./Footer.css";
-// import { Link } from "react-router-dom";
-// import { useProducts } from "../../contexts/productContext";
-
-// const Footer = () => {
-//   const { showFilter } = useProducts();
-
-//   return (
-//     <footer className={`${showFilter ? "hide-div" : null}`}>
-//       <div className="about">
-//         <Link to="/" className="nav-brand">
-//           ScentYard
-//         </Link>
-
-//         <div className="text">Choose from our wide variety of fragrances</div>
-
-//         <div className="social">
-//           <a href="https://github.com/himadri2110" target="_blank">
-//             <i className="fa fa-github"></i>
-//           </a>
-//           <a href="https://twitter.com/himadri2110" target="_blank">
-//             <i className="fa fa-twitter"></i>
-//           </a>
-//           <a href="https://linkedin.com/in/himadri2110" target="_blank">
-//             <i className="fa fa-linkedin"></i>
-//           </a>
-//         </div>
-//       </div>
-
-//       <div className="quick-links">
-//         <div className="heading">Quick Links</div>
-//         <div className="sub-heading">
-//           <Link to="/products">Products</Link>
-//         </div>
-//         <div className="sub-heading">
-//           <Link to="/wishlist">Wishlist</Link>
-//         </div>
-//         <div className="sub-heading">
-//           <Link to="/cart">Cart</Link>
-//         </div>
-//       </div>
-
-//       <div className="contact">
-//         <div className="heading">Contact Us</div>
-
-//         <div className="sub-heading address">
-//           <i className="fa fa-map-marker"></i>Garden East, Karachi, Pakistan
-//         </div>
-//         <div className="sub-heading phone">
-//           <i className="fa fa-phone"></i>+92 306 6189479
-//         </div>
-//         <div className="sub-heading e-mail">
-//           <i className="fa fa-envelope"></i>scentsyard@gmail.com
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export { Footer };
-
-import "./Footer.css";
 import { Link } from "react-router-dom";
 import { useProducts } from "../../contexts/productContext";
 
@@ -68,54 +6,67 @@ const Footer = () => {
 
   return (
     <footer
-      className={`${
+      className={`mt-8 bg-[#CFE1E1] p-8 ${
         showFilter ? "hidden" : null
-      } flex items-center justify-between overflow-hidden`}
+      } sm:grid sm:grid-cols-3 sm:gap-8`}
     >
-      {/* <div className=""> */}
-      <div>
-        <Link to="/" className="nav-brand">
+      <div className="mb-8 sm:mb-0">
+        <Link to="/" className="text-4xl font-bold text-[#49625F]">
           ScentYard
         </Link>
-        <div className="text">Choose from our wide variety of fragrances</div>
-        <div className="social">
-          <a href="https://github.com/himadri2110" target="_blank">
+        <div className="text-sm">
+          Choose from our wide variety of fragrances
+        </div>
+        <div className="social mt-2">
+          <Link
+            to="https://github.com/himadri2110"
+            target="_blank"
+            className="text-[#384A48] mr-2"
+          >
             <i className="fa fa-github"></i>
-          </a>
-          <a href="https://twitter.com/himadri2110" target="_blank">
+          </Link>
+          <Link
+            to="https://twitter.com/himadri2110"
+            target="_blank"
+            className="text-[#384A48] mr-2"
+          >
             <i className="fa fa-twitter"></i>
-          </a>
-          <a href="https://linkedin.com/in/himadri2110" target="_blank">
+          </Link>
+          <Link
+            to="https://linkedin.com/in/himadri2110"
+            target="_blank"
+            className="text-[#384A48]"
+          >
             <i className="fa fa-linkedin"></i>
-          </a>
+          </Link>
         </div>
       </div>
-      {/* </div> */}
 
-      <div className="quick-links">
-        <div className="heading">Quick Links</div>
-        <div className="sub-heading">
+      <div className="quick-links mb-8 sm:mb-0">
+        <div className="heading font-bold mb-2">Quick Links</div>
+        <div className="sub-heading text-sm">
           <Link to="/products">Products</Link>
         </div>
-        <div className="sub-heading">
+        <div className="sub-heading text-sm">
           <Link to="/wishlist">Wishlist</Link>
         </div>
-        <div className="sub-heading">
+        <div className="sub-heading text-sm">
           <Link to="/cart">Cart</Link>
         </div>
       </div>
 
       <div className="contact">
-        <div className="heading">Contact Us</div>
+        <div className="heading font-bold mb-2">Contact Us</div>
 
-        <div className="sub-heading address">
-          <i className="fa fa-map-marker"></i>Garden East, Karachi, Pakistan
+        <div className="sub-heading address text-sm">
+          <i className="fa fa-map-marker mr-2"></i>Garden East, Karachi,
+          Pakistan
         </div>
-        <div className="sub-heading phone">
-          <i className="fa fa-phone"></i>+92 306 6189479
+        <div className="sub-heading phone text-sm">
+          <i className="fa fa-phone mr-2"></i>+92 306 6189479
         </div>
-        <div className="sub-heading e-mail">
-          <i className="fa fa-envelope"></i>scentsyard@gmail.com
+        <div className="sub-heading e-mail text-sm">
+          <i className="fa fa-envelope mr-2"></i>scentsyard@gmail.com
         </div>
       </div>
     </footer>

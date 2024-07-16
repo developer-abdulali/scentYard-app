@@ -11,12 +11,9 @@ const Navbar = () => {
 
   return (
     // <nav className="sticky !top-0 z-10 flex items-center justify-between bg-white py-3 px-4 sm:py-5 sm:px-10 mb-6 sm:mb-10">
-    <nav className="sticky top-0 z-10 flex items-center justify-between bg-white py-3 px-4 sm:py-5 sm:px-10 mb-6 sm:mb-10">
+    <nav className="sticky top-0 z-10 flex items-center justify-between bg-white py-3 px-4 sm:py-5 sm:px-10 mb-6 shadow-md">
       <div className="flex items-center gap-2 mb-3 sm:mb-0">
-        <Link
-          to="/"
-          className="text-[#436C68] text-2xl sm:text-4xl font-normal"
-        >
+        <Link to="/" className="text-primary text-2xl sm:text-4xl font-normal">
           ScentYard
         </Link>
         <Link to="/products" className="underline">
@@ -25,12 +22,12 @@ const Navbar = () => {
       </div>
 
       {/* search bar */}
-      <div className="hidden md:block w-full sm:w-auto mb-3 sm:mb-0">
+      <div className="hidden md:block w-full sm:w-auto">
         <SearchBar />
       </div>
 
       {/* icons */}
-      <div className="flex items-center gap-3 text-[#436C68]">
+      <div className="flex items-center gap-3 text-primary">
         <Link to="/wishlist" title="Wishlist" className="relative">
           <i className="fa-solid fa-heart"></i>
           {isAuth && wishlistState.length > 0 ? (

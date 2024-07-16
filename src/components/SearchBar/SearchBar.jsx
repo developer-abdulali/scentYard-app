@@ -45,7 +45,7 @@ const SearchBar = () => {
       type="text"
       placeholder="Search"
       onChange={debounce(onChangeHandler, 500)}
-      className="border border-[#436C68] w-[218px] h-8 px-2 rounded-md focus:outline-none"
+      className="border border-primary w-[218px] h-8 px-2 rounded-md focus:outline-none"
     />
   );
 };

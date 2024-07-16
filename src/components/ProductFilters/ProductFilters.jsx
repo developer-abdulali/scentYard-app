@@ -428,6 +428,7 @@ const ProductFilters = () => {
                   payload: { value: e.target.value },
                 })
               }
+              className="custom-range-input"
             />
             <datalist id="steplist">
               <option>0</option>

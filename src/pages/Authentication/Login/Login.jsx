@@ -72,7 +72,6 @@ const Login = () => {
           <Loader />
         ) : (
           <div className="max-w-md w-full p-4 border border-gray-200 bg-white rounded-md">
-            <div className="text-center text-red-500">{login.error}</div>
             <div className="text-center text-2xl font-bold mb-4">Log In</div>
 
             <form className="space-y-4" onSubmit={loginHandler}>
@@ -116,16 +115,17 @@ const Login = () => {
                     }
                   ></i>
                 </div>
+                <div className="text-center text-red-500">{login.error}</div>
               </div>
 
               <button
-                className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full px-4 py-2 text-white bg-[#436C68] rounded-md hover:bg-[#436c68e9] "
                 type="submit"
               >
                 Log In
               </button>
               <button
-                className="w-full px-4 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full px-4 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-100"
                 type="button"
                 onClick={() =>
                   setLogin({

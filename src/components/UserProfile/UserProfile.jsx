@@ -52,7 +52,7 @@ const UserProfile = () => {
       </div>
 
       <button
-        className="border border-gray-200 mt-6 text-sm px-2 py-1"
+        className="border bg-primary text-white hover:bg-primary/90 mt-6 text-sm px-2 py-1"
         onClick={logoutHandler}
       >
         Logout

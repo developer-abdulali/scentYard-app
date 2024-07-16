@@ -185,7 +185,7 @@ const SignUp = () => {
 
               {signup.pwdMatch ? (
                 <button
-                  className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-2 text-white bg-primary rounded-md hover:bg-primary/90"
                   type="submit"
                 >
                   Create New Account
