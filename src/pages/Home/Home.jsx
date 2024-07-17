@@ -132,7 +132,6 @@ const Home = () => {
           <div className="text-4xl text-center my-10 font-semibold">
             Categories:
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 category-grid">
             {categories.map((category) => {
               return (

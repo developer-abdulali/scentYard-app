@@ -125,7 +125,7 @@ const Login = () => {
                 Log In
               </button>
               <button
-                className="w-full px-4 py-2 text-primary border border-primary rounded-md hover:bg-blue-100"
+                className="w-full px-4 py-2 text-primary border border-primary rounded-md hover:bg-blue-100 hover:no-underline"
                 type="button"
                 onClick={() =>
                   setLogin({

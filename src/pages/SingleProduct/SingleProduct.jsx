@@ -40,7 +40,8 @@ const SingleProduct = () => {
             <div className="relative sm:w-1/2">
               <img
                 src={currentProduct.image}
-                className="object-contain h-full rounded-md"
+                className="object-contain h-full pr-5 rounded-md"
+                // className="object-contain h-full rounded-md"
                 alt={currentProduct.title}
               />
               <button

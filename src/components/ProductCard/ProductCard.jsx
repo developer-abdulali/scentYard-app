@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useWishlist } from "../../contexts/wishlistContext";
 import { useCart } from "../../contexts/cartContext";
 import { useAuth } from "../../contexts/authContext";
-import { GoHeart } from "react-icons/go";
+import { FaRegHeart } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
   const { _id, title, price, discount, discountedPrice, image, inStock, id } =
@@ -70,17 +70,14 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="ml-2 text-sm text-green-600">{discount}% off</div>
           {!inStock ? (
-            <div className="text-center text-sm ml-2">Out of Stock</div>
+            <div className="text-center text-sm ml-2 text-red-500">
+              Out of Stock
+            </div>
           ) : null}
         </div>
       </div>
 
-      <div
-        className="px-2 py-1"
-        // className={`px-2 py-1 ${
-        //   !inStock ? "bg-gray-200  rounded-b-[10px]" : ""
-        // }`}
-      >
+      <div className="px-2 py-1">
         <button
           className={`w-full px-4 py-2 text-white bg-primary rounded-md hover:bg-primary/90 font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 ${
             !inStock ? "cursor-not-allowed" : ""
