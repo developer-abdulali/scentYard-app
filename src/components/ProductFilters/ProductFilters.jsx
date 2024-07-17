@@ -385,7 +385,7 @@ const ProductFilters = () => {
         <div className="text-3xl font-semibold">Filters</div>
 
         <div className="clear-wrapper">
-          <a
+          <div
             className="clear-filter"
             onClick={() =>
               productDispatch({
@@ -395,7 +395,7 @@ const ProductFilters = () => {
             }
           >
             Clear
-          </a>
+          </div>
           <button
             className="btn btn-floating btn-secondary"
             onClick={toggleFilter}

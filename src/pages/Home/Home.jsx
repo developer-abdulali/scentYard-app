@@ -127,6 +127,7 @@ const Home = () => {
         </div>
 
         {/* categories */}
+        {/* <div className="px-5"> */}
         <div className="main-category">
           <div className="text-4xl text-center my-10 font-semibold">
             Categories:
@@ -165,6 +166,7 @@ const Home = () => {
         </div>
 
         <div className="featured-category">
+          {/* <div className="featured-category"> */}
           <div className="text-4xl text-center my-10 font-semibold">
             Featured:
           </div>

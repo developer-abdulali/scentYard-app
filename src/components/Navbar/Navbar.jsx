@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/authContext";
 import { useWishlist } from "../../contexts/wishlistContext";
 import { useCart } from "../../contexts/cartContext";
 import { SearchBar } from "../SearchBar/SearchBar";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const { isAuth, logoutHandler } = useAuth();
   const { wishlistState } = useWishlist();
   const { cartState } = useCart();
@@ -13,9 +14,12 @@ const Navbar = () => {
     // <nav className="sticky !top-0 z-10 flex items-center justify-between bg-white py-3 px-4 sm:py-5 sm:px-10 mb-6 sm:mb-10">
     <nav className="sticky top-0 z-10 flex items-center justify-between bg-white py-3 px-4 sm:py-5 sm:px-10 mb-6 shadow-md">
       <div className="flex items-center gap-2 mb-3 sm:mb-0">
-        <Link to="/" className="text-primary text-2xl sm:text-4xl font-normal">
+        <button
+          onClick={() => navigate("/")}
+          className="text-primary text-2xl sm:text-4xl font-normal hover:no-underline"
+        >
           ScentYard
-        </Link>
+        </button>
         <Link to="/products" className="underline">
           Shop
         </Link>
@@ -31,7 +35,7 @@ const Navbar = () => {
         <Link to="/wishlist" title="Wishlist" className="relative">
           <i className="fa-solid fa-heart"></i>
           {isAuth && wishlistState.length > 0 ? (
-            <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-1">
+            <span className="absolute  -top-3 -right-1 bg-red-500 text-white rounded-full text-xs px-1">
               {wishlistState.length}
             </span>
           ) : null}
@@ -40,7 +44,7 @@ const Navbar = () => {
         <Link to="/cart" title="Cart" className="relative">
           <i className="fa-solid fa-shopping-cart"></i>
           {isAuth && cartState.length > 0 ? (
-            <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-1">
+            <span className="absolute -top-3 -right-1 bg-red-500 text-white rounded-full text-xs px-1">
               {cartState.length}
             </span>
           ) : null}

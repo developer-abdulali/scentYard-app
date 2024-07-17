@@ -33,11 +33,14 @@ const CartCard = ({ product }) => {
               >
                 -
               </button>
-              <input
+              <span className="px-4 text-center border border-primary rounded">
+                {qty}
+              </span>
+              {/* <input
                 type="number"
                 value={qty}
                 className="w-10 text-center border border-primary rounded"
-              />
+              /> */}
               <button
                 className="border border-primary rounded-full px-2 mx-1"
                 onClick={() => updateQtyHandler(product, "increment")}
@@ -55,7 +58,7 @@ const CartCard = ({ product }) => {
             Move to Wishlist
           </button>
           <button
-            className="border border-primary text-primary py-1 px-2 rounded mt-2 w-full"
+            className="border border-primary text-primary py-1 px-2 rounded mt-2 w-full hover:no-underline"
             onClick={() => removeFromCartHandler(product)}
             disabled={loading}
           >

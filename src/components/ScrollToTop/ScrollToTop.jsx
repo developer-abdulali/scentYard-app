@@ -1,12 +1,12 @@
-import "./ScrollToTop.css";
+import React from "react";
 
 const ScrollToTop = () => {
   return (
     <button
-      className="scroll-btn btn btn-floating btn-primary"
+      className="fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
       onClick={() => window.scrollTo(0, 0)}
     >
-      <i className="fa-solid fa-angle-up"></i>
+      <i className="fas fa-angle-up"></i>
     </button>
   );
 };

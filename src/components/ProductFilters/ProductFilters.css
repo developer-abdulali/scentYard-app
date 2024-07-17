@@ -33,6 +33,12 @@
   display: flex;
   align-items: center;
 }
+.filter-value input[type="checkbox"]:checked {
+  accent-color: #436c68;
+}
+.filter-value input[type="radio"]:checked {
+  accent-color: #436c68;
+}
 
 .filter-wrapper label,
 .filter-wrapper input[type="range"] {
@@ -54,6 +60,7 @@
   font-size: 0.9rem;
   color: var(--text-secondary);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .filter-wrapper input[type="radio"],
