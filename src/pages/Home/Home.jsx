@@ -46,52 +46,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* services-category */}
-        {/* <div className="services-category">
-          <div className="service">
-            <div className="icon">
-              <i className="fa-solid fa-check-circle"></i>
-            </div>
-
-            <div>
-              <p className="text-xl md:text-2xl font-extrabold">
-                Money Guarantee
-              </p>
-              <div className="text-xl md:text-2xl font-normal">
-                7 Days Money Back
-              </div>
-            </div>
-          </div>
-
-          <div className="service">
-            <div className="icon">
-              <i className="fa-solid fa-truck-fast"></i>
-            </div>
-
-            <div>
-              <div className="text-xl md:text-2xl font-extrabold">
-                Fast Delivery
-              </div>
-              <div className="text-xl md:text-2xl">
-                Within 3-5 business days
-              </div>
-            </div>
-          </div>
-
-          <div className="service">
-            <div className="icon">
-              <i className="fa fa-credit-card"></i>
-            </div>
-
-            <div className="text">
-              <div className="text-xl md:text-2xl font-extrabold">
-                Secure Payments
-              </div>
-              <div className="text-xl md:text-2xl">All Cards Accepted</div>
-            </div>
-          </div>
-        </div> */}
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center my-10 mx-4">
           <div className="flex flex-col items-center">
             <div className="text-4xl text-green-600">

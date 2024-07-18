@@ -1,4 +1,4 @@
-import "./ProductCard.css";
+// import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../contexts/wishlistContext";
 import { useCart } from "../../contexts/cartContext";
@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
       <Link to={`/products/${id}`}>
         <img
           src={image}
-          className="w-full h-64 object-contain p-5"
+          className="w-full rounded-t-[9px] object-contain"
           alt={title}
         />
       </Link>
@@ -56,10 +56,6 @@ const ProductCard = ({ product }) => {
           {title}
         </Link>
       </div>
-
-      {/* {!inStock ? (
-        <div className="text-center text-sm">Out of Stock</div>
-      ) : null} */}
 
       <div className="px-2 py-1">
         {/* <div className={`px-2 py-1 ${!inStock ? "bg-gray-200" : ""}`}> */}
