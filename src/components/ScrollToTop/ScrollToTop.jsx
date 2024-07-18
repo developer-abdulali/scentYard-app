@@ -34,7 +34,7 @@ const ScrollToTop = () => {
     <>
       {isVisible && (
         <div
-          className={`fixed bottom-10 right-10 cursor-pointer bg-primary  text-white w-10 h-10 rounded-full flex justify-center items-center shadow-md hover:bg-primary/90 duration-300 z-50 ${
+          className={`fixed bottom-5 right-5 cursor-pointer bg-primary text-white w-10 h-10 rounded-full flex justify-center items-center shadow-md hover:bg-primary/90 duration-300 z-50 ${
             isScrolled ? "opacity-100" : "opacity-0"
           }`}
           onClick={scrollToTop}

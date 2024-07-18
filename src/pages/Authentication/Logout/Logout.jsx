@@ -7,8 +7,8 @@ const Logout = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="flex-grow flex flex-col items-center justify-center bg-gray-100">
-        <div className="border border-gray-800 p-4 max-w-lg text-center">
+      <section className="flex-grow flex flex-col items-center justify-center">
+        <div className="border border-primary p-4 max-w-lg text-center">
           <div className="text-6xl text-blue-500">
             <i className="fas fa-check-circle"></i>
           </div>

@@ -22,7 +22,7 @@ export const OrderSummary = () => {
               Order Placed Successfully!
             </h2>
 
-            <div className="grid grid-cols-2 gap-4 max-w-5xl mx-auto p-4 text-sm border border-gray-200 rounded-lg shadow-md">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto p-4 text-sm border border-gray-200 rounded-lg shadow-md">
               <div>
                 <div className="space-y-2" key={latestOrder?.paymentId}>
                   <div className="flex">
@@ -55,7 +55,7 @@ export const OrderSummary = () => {
                       <Link
                         to={`/products/${product.id}`}
                         key={product.id}
-                        className="grid grid-cols-2 gap-4 p-4 border border-gray-200 rounded-lg shadow-md cursor-pointer"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 border border-gray-200 rounded-lg shadow-md cursor-pointer"
                       >
                         <img
                           src={product.image}
