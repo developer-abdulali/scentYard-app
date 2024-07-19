@@ -32,7 +32,6 @@ export const products = [
     title: "FOGG Scent Expressio 50ml Eau de Parfum - 50 ml  (For Men)",
     brand: "FOGG",
     image: menImage1,
-    // "https://rukminim1.flixcart.com/image/416/416/kpcy5jk0/perfume/h/b/p/scent-expressio-50ml-eau-de-parfum-fogg-men-original-imag3mfxhsgdubyx.jpeg",
     price: "399",
     discount: "45",
     category: "men",
@@ -42,10 +41,10 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "DENVER Black Code Perfume Eau de Parfum - 60 ml  (For Men)",
+    title:
+      "Azzaro Wanted is a bold and adventurous men's fragrance. It opens with vibrant notes of lemon and ginger, followed by a heart of cardamom and juniper. The base is enriched with warm, woody accords of vetiver and tonka bean. (For Men)",
     brand: "DENVER",
     image: menImage2,
-    // "https://rukminim1.flixcart.com/image/416/416/jyeq64w0/perfume/u/k/f/60-black-code-perfume-eau-de-parfum-denver-men-original-imafgnqkrf3ypryv.jpeg?q=70",
     price: "249",
     discount: "22",
     category: "men",
@@ -59,7 +58,6 @@ export const products = [
       "Wild Stone Edge and Ultra Sensual Perfume Combo for Men Eau de Parfum - 60 ml (For Men)",
     brand: "WILD STONE",
     image: menImage3,
-    // "https://rukminim1.flixcart.com/image/416/416/kbb49zk0/perfume/c/g/n/60-edge-and-ultra-sensual-perfume-combo-for-men-eau-de-parfum-original-imafszqjqythg3gh.jpeg?q=70",
     price: "498",
     discount: "40",
     category: "men",
@@ -73,7 +71,6 @@ export const products = [
       "ENVY Combo Perfume For Men 60ML + 60ML Eau de Parfum - 120 ml  (For Men)",
     brand: "ENVY",
     image: menImage4,
-    // "https://rukminim1.flixcart.com/image/416/416/k2tc1ow0/perfume/h/m/z/120-combo-perfume-for-men-60ml-60ml-eau-de-parfum-envy-men-women-original-imafm2rjfpucs4py.jpeg",
     price: "498",
     discount: "32",
     category: "men",
@@ -83,10 +80,10 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "FOGG Scent Impressio Eau de Parfum - 100 ml (For Men)",
+    title:
+      "Eros by Versace is a passionate men's fragrance  The scent features fresh top notes of mint, green apple, and lemon. The heart reveals an aromatic blend of tonka bean, geranium, and ambroxan, while the base is a rich combination of vanilla, vetiver, oakmoss, and cedarwood (For Men)",
     brand: "FOGG",
     image: menImage5,
-    // "https://rukminim1.flixcart.com/image/416/416/kctf0cw0pkrrdj/personal-care/s/t/p/100-scent-impressio-fogg-original-imafty3b5fnh5fkg.jpeg?q=70",
     price: "500",
     discount: "36",
     category: "men",
@@ -99,7 +96,6 @@ export const products = [
     title: "Wild Stone Edge Perfume Eau de Parfum - 50 ml (For Men)",
     brand: "WILD STONE",
     image: menImage6,
-    // "https://rukminim1.flixcart.com/image/416/416/k9u8zgw0/perfume/u/f/p/50-edge-perfume-eau-de-parfum-wild-stone-men-original-imafrjh8pzpqzyhg.jpeg",
     price: "399",
     discount: "33",
     category: "men",
@@ -109,10 +105,10 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Wild Stone Edge Perfume Eau de Parfum - 50 ml (For Men)",
+    title:
+      "Blue de Channel is a sophisticated men's fragrance with a fresh, aromatic composition. Top notes of citrus and mint blend seamlessly with a heart of pink pepper, ginger, and nutmeg, while base notes of cedar, sandalwood, and incense provide a warm, woody finish.(For Men)",
     brand: "WILD STONE",
     image: menImage7,
-    // "https://rukminim1.flixcart.com/image/416/416/k9u8zgw0/perfume/u/f/p/50-edge-perfume-eau-de-parfum-wild-stone-men-original-imafrjh8pzpqzyhg.jpeg",
     price: "399",
     discount: "33",
     category: "men",
@@ -125,7 +121,6 @@ export const products = [
     title: "Wild Stone Edge Perfume Eau de Parfum - 50 ml (For Men)",
     brand: "WILD STONE",
     image: menImage8,
-    // "https://rukminim1.flixcart.com/image/416/416/k9u8zgw0/perfume/u/f/p/50-edge-perfume-eau-de-parfum-wild-stone-men-original-imafrjh8pzpqzyhg.jpeg",
     price: "399",
     discount: "33",
     category: "men",
@@ -138,7 +133,6 @@ export const products = [
     title: "Wild Stone Edge Perfume Eau de Parfum - 50 ml (For Men)",
     brand: "WILD STONE",
     image: menImage9,
-    // "https://rukminim1.flixcart.com/image/416/416/k9u8zgw0/perfume/u/f/p/50-edge-perfume-eau-de-parfum-wild-stone-men-original-imafrjh8pzpqzyhg.jpeg",
     price: "399",
     discount: "33",
     category: "men",
@@ -148,10 +142,10 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Wild Stone Edge Perfume Eau de Parfum - 50 ml (For Men)",
+    title:
+      "1 Million by Paco Rabanne is a luxurious and seductive men's fragrance. It opens with fresh top notes of blood mandarin, peppermint, and grapefruit, leading into a spicy heart of rose, cinnamon, and leather. The base is a rich blend of amber, patchouli, and woody notes, creating an irresistible and lasting scent. (For Men)",
     brand: "WILD STONE",
     image: menImage10,
-    // "https://rukminim1.flixcart.com/image/416/416/k9u8zgw0/perfume/u/f/p/50-edge-perfume-eau-de-parfum-wild-stone-men-original-imafrjh8pzpqzyhg.jpeg",
     price: "399",
     discount: "33",
     category: "men",
@@ -184,7 +178,7 @@ export const products = [
     discount: "21",
     category: "men & women",
     rating: 5,
-    inStock: false,
+    inStock: true,
     fastDelivery: true,
   },
   {
@@ -198,7 +192,7 @@ export const products = [
     discount: "65",
     category: "men & women",
     rating: 4.6,
-    inStock: false,
+    inStock: true,
     fastDelivery: true,
   },
   {
@@ -240,7 +234,7 @@ export const products = [
     discount: "32",
     category: "men & women",
     rating: 4,
-    inStock: false,
+    inStock: true,
     fastDelivery: true,
   },
   {
@@ -260,10 +254,10 @@ export const products = [
   // women
   {
     _id: uuid(),
-    title: "FOGG Scent Beautiful Secret Eau de Parfum - 100 ml (For Women)",
+    title:
+      "A luxurious and seductive fragrance, featuring an explosive bouquet of sambac jasmine, centifolia rose, cattleya orchid, and patchouli. (For Women)",
     brand: "FOGG",
     image: womenImage1,
-    // "https://rukminim1.flixcart.com/image/416/416/kk5rgy80/perfume/g/e/4/scent-beautiful-secret-eau-de-parfum-fogg-women-original-imafzk92ugzy5drh.jpeg",
     price: "599",
     discount: "29",
     category: "women",
@@ -273,7 +267,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "ENVY Natural Spray Eau de Parfum - 60 ml (For Women)",
+    title:
+      "A charming and romantic fragrance with floral and fruity accords, complemented by vanilla and musk (For Women)",
     brand: "ENVY",
     image: womenImage2,
     // "https://rukminim1.flixcart.com/image/416/416/kkyc9zk0/perfume/8/e/u/white-eau-de-toilette-envy-men-original-imagy6h6cz8aqxw6.jpeg",
@@ -281,15 +276,15 @@ export const products = [
     discount: "17",
     category: "women",
     rating: 3.9,
-    inStock: false,
+    inStock: true,
     fastDelivery: true,
   },
   {
     _id: uuid(),
-    title: "FOGG Scent Gardenia 50ml Eau de Parfum - 50 ml (For Women)",
+    title:
+      "An intoxicating and impulsive scent that blends gardenia, freesia, jasmine, vanilla, and patchouli to evoke passion and urgency. (For Women)",
     brand: "FOGG",
     image: womenImage3,
-    // "https://rukminim1.flixcart.com/image/416/416/kqo3onk0/perfume/b/p/q/scent-gardenia-50ml-eau-de-parfum-fogg-women-original-imag4mqszkf5fupz.jpeg",
     price: "699",
     discount: "25",
     category: "women",
@@ -300,10 +295,9 @@ export const products = [
   {
     _id: uuid(),
     title:
-      "SKINN by TITAN Tales Ibiza Perfume Eau de Parfum - 100 ml (For Women)",
+      "A sophisticated and sensual fragrance combining ylang-ylang, damask rose, jasmine, and bergamot to celebrate the beauty of flowers. (For Women)",
     brand: "SKINN",
     image: womenImage4,
-    // "https://rukminim1.flixcart.com/image/416/416/kpodocw0/perfume/d/p/h/tales-ibiza-perfume-eau-de-parfum-skinn-by-titan-women-original-imag3urac4egkyuw.jpeg",
     price: "1595",
     discount: "25",
     category: "women",
@@ -313,24 +307,24 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Ajmal DIZA EDP 100 ml Eau de Parfum - 100 ml (For Women)",
+    title:
+      "A glamorous fruity-floral blend with purple passion fruit, Shangri-la peony, and vanilla orchid, exuding sensuality and elegance. (For Women)",
     brand: "AJMAL",
     image: womenImage5,
-    // "https://rukminim1.flixcart.com/image/416/416/jnyxd3k0/perfume/a/h/y/100-diza-edp-100-ml-eau-de-parfum-ajmal-women-original-imafajbhcgzsbhpk.jpeg",
     price: "1250",
     discount: "40",
     category: "women",
     rating: 2.5,
-    inStock: false,
+    inStock: true,
     fastDelivery: false,
   },
 
   {
     _id: uuid(),
-    title: "SKINN by TITAN celeste Eau de Parfum - 50 ml (For Women)",
+    title:
+      "A fresh, vibrant fragrance, often referred to as Versace Pink, with notes of pomegranate, yuzu, magnolia, lotus, and musk. (For Women)",
     brand: "SKINN",
     image: womenImage6,
-    // "https://rukminim1.flixcart.com/image/416/416/kosxzm80/perfume/m/u/5/celeste-eau-de-parfum-skinn-by-titan-women-original-imag36mjwz9ex6yk.jpeg?q=70",
     price: "1895",
     discount: "32",
     category: "women",
@@ -341,10 +335,10 @@ export const products = [
 
   {
     _id: uuid(),
-    title: "Ajmal SENORA Eau de Parfum - 75 ml (For Women)",
+    title:
+      "A bewitching scent with sweet and spicy notes of bitter almond, jasmine, caraway, vanilla, and musk. (For Women)",
     brand: "AJMAL",
     image: womenImage7,
-    // "https://rukminim1.flixcart.com/image/416/416/k0vbgy80/perfume/7/z/f/100-senora-perfume-maryaj-goldie-perfume-maryaj-m-for-her-original-imaeq64whug2enhm.jpeg?q=70",
     price: "2000",
     discount: "30",
     category: "women",
@@ -354,10 +348,10 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Ajmal SENORA Eau de Parfum - 75 ml (For Women)",
+    title:
+      "A fresh and feminine scent inspired by Gucci’s floral patterns, featuring peony, citrus, osmanthus, rose, and sandalwood. (For Women)",
     brand: "AJMAL",
     image: womenImage8,
-    // "https://rukminim1.flixcart.com/image/416/416/k0vbgy80/perfume/7/z/f/100-senora-perfume-maryaj-goldie-perfume-maryaj-m-for-her-original-imaeq64whug2enhm.jpeg?q=70",
     price: "2000",
     discount: "30",
     category: "women",
@@ -367,10 +361,10 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Ajmal SENORA Eau de Parfum - 75 ml (For Women)",
+    title:
+      "A rich, white floral fragrance capturing contemporary femininity with notes of rangoon creeper, jasmine bud, and tuberose. (For Women)",
     brand: "AJMAL",
     image: womenImage9,
-    // "https://rukminim1.flixcart.com/image/416/416/k0vbgy80/perfume/7/z/f/100-senora-perfume-maryaj-goldie-perfume-maryaj-m-for-her-original-imaeq64whug2enhm.jpeg?q=70",
     price: "2000",
     discount: "30",
     category: "women",
@@ -383,7 +377,6 @@ export const products = [
     title: "Ajmal SENORA Eau de Parfum - 75 ml (For Women)",
     brand: "AJMAL",
     image: womenImage10,
-    // "https://rukminim1.flixcart.com/image/416/416/k0vbgy80/perfume/7/z/f/100-senora-perfume-maryaj-goldie-perfume-maryaj-m-for-her-original-imaeq64whug2enhm.jpeg?q=70",
     price: "2000",
     discount: "30",
     category: "women",

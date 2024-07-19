@@ -10,8 +10,12 @@ const HorizontalCard = ({ product }) => {
   const itemInCart = cartState.find((item) => item._id === _id);
 
   return (
-    <div className="flex flex-col md:flex-row items-center p-4 border border-[#436C68] rounded-md ">
-      <img src={image} className="w-40 h-40 object-contain" alt="Perfume" />
+    <div className="flex flex-col md:flex-row items-center p-2 border border-[#436C68] rounded-md ">
+      <img
+        src={image}
+        className="w-40 h-40 rounded-l-lg object-contain"
+        alt="Perfume"
+      />
 
       <div className="flex-1 pl-0 md:pl-4">
         <Link to={`/products/${id}`}>

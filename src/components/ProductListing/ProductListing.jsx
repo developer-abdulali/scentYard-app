@@ -52,7 +52,7 @@ const ProductListing = () => {
       ) : filteredProducts.length > 0 ? (
         <div>
           <div className="product-heading">
-            <div className="heading-3">
+            <div className="text-xl font-bold ml-2">
               Showing {filteredProducts.length} of {products.length} Products
             </div>
             <button

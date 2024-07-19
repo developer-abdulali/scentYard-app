@@ -36,7 +36,8 @@ const SingleProduct = () => {
 
       <section className="flex justify-center">
         {currentProduct ? (
-          <section className="max-w-4xl p-6 mx-4 my-2 bg-white border border-primary rounded-lg shadow-md sm:flex sm:gap-6">
+          <section className="max-w-4xl p-2 mx-4 my-2 bg-white border border-primary rounded-lg shadow-md sm:flex sm:gap-6">
+            {/* <section className="max-w-4xl p-6 mx-4 my-2 bg-white border border-primary rounded-lg shadow-md sm:flex sm:gap-6"> */}
             <div className="relative sm:w-1/2">
               <img
                 src={currentProduct.image}

@@ -26,11 +26,7 @@ const ProductCard = ({ product }) => {
       }`}
     >
       <Link to={`/products/${id}`}>
-        <img
-          src={image}
-          className="w-full rounded-t-[9px] object-contain"
-          alt={title}
-        />
+        <img src={image} className="w-full h-72 rounded-t-[9px]" alt={title} />
       </Link>
 
       <div>
