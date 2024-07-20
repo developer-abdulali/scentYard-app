@@ -9,6 +9,35 @@ import menImage7 from "../../assets/forMens/7.png";
 import menImage8 from "../../assets/forMens/8.png";
 import menImage9 from "../../assets/forMens/9.png";
 import menImage10 from "../../assets/forMens/10.png";
+import CoolWater1 from "../../assets/forMens/imgsWtihoutBG/coolWater1.jpg";
+import CoolWater2 from "../../assets/forMens/imgsWtihoutBG/coolWater2.jpg";
+import CoolWater3 from "../../assets/forMens/imgsWtihoutBG/coolWater3.jpg";
+import AzzaroWanted1 from "../../assets/forMens/imgsWtihoutBG/azzaro1.jpg";
+import AzzaroWanted2 from "../../assets/forMens/imgsWtihoutBG/azzaro2.jpg";
+import Bulgari1 from "../../assets/forMens/imgsWtihoutBG/bulgari1.jpg";
+import Bulgari2 from "../../assets/forMens/imgsWtihoutBG/bulgari2.jpg";
+import Bulgari3 from "../../assets/forMens/imgsWtihoutBG/bulgari3.jpg";
+import Eternity1 from "../../assets/forMens/imgsWtihoutBG/eternity1.jpg";
+import Eternity2 from "../../assets/forMens/imgsWtihoutBG/eternity2.jpg";
+import Eternity3 from "../../assets/forMens/imgsWtihoutBG/eternity3.jpg";
+import Eros1 from "../../assets/forMens/imgsWtihoutBG/eros1.jpg";
+import Eros2 from "../../assets/forMens/imgsWtihoutBG/eros2.jpg";
+import Eros3 from "../../assets/forMens/imgsWtihoutBG/eros3.jpg";
+import Dunahil1 from "../../assets/forMens/imgsWtihoutBG/dunahil1.jpg";
+import Dunahil2 from "../../assets/forMens/imgsWtihoutBG/dunahil2.jpg";
+import Dunahil3 from "../../assets/forMens/imgsWtihoutBG/dunahil3.jpg";
+import BlueTheChannel1 from "../../assets/forMens/imgsWtihoutBG/blueTheChannel1.jpg";
+import BlueTheChannel2 from "../../assets/forMens/imgsWtihoutBG/blueTheChannel2.jpg";
+import BlueTheChannel3 from "../../assets/forMens/imgsWtihoutBG/blueTheChannel3.jpg";
+import Sauvage1 from "../../assets/forMens/imgsWtihoutBG/sauvage1.jpg";
+import Sauvage2 from "../../assets/forMens/imgsWtihoutBG/sauvage2.jpg";
+import Sauvage3 from "../../assets/forMens/imgsWtihoutBG/sauvage3.jpg";
+import Creed1 from "../../assets/forMens/imgsWtihoutBG/creed1.jpg";
+import Creed2 from "../../assets/forMens/imgsWtihoutBG/creed2.jpg";
+import Creed3 from "../../assets/forMens/imgsWtihoutBG/creed3.jpg";
+import OneMillion1 from "../../assets/forMens/imgsWtihoutBG/1million1.jpg";
+import OneMillion2 from "../../assets/forMens/imgsWtihoutBG/1million2.jpg";
+import OneMillion3 from "../../assets/forMens/imgsWtihoutBG/1million3.jpg";
 import womenImage1 from "../../assets/forWomens/1.png";
 import FlowerBomb1 from "../../assets/forWomens/imgsWtihoutBG/flowerBomb1.jpg";
 import FlowerBomb2 from "../../assets/forWomens/imgsWtihoutBG/flowerBomb2.jpg";
@@ -65,6 +94,7 @@ export const products = [
     rating: 4.3,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [CoolWater1, CoolWater2, CoolWater3],
   },
   {
     _id: uuid(),
@@ -78,11 +108,7 @@ export const products = [
     rating: 4.2,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [
-      "https://via.placeholder.com/150/92c952",
-      "https://via.placeholder.com/150/771796",
-      "https://via.placeholder.com/150/24f355",
-    ],
+    additionalImages: [AzzaroWanted1, AzzaroWanted2],
   },
   {
     _id: uuid(),
@@ -96,6 +122,7 @@ export const products = [
     rating: 4.2,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [Bulgari1, Bulgari2, Bulgari3],
   },
   {
     _id: uuid(),
@@ -109,6 +136,7 @@ export const products = [
     rating: 3.8,
     inStock: true,
     fastDelivery: true,
+    additionalImages: [Eternity1, Eternity2, Eternity3],
   },
   {
     _id: uuid(),
@@ -122,6 +150,7 @@ export const products = [
     rating: 4.2,
     inStock: true,
     fastDelivery: true,
+    additionalImages: [Eros1, Eros2, Eros3],
   },
   {
     _id: uuid(),
@@ -134,6 +163,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [Dunahil1, Dunahil2, Dunahil3],
   },
   {
     _id: uuid(),
@@ -147,6 +177,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [BlueTheChannel1, BlueTheChannel2, BlueTheChannel3],
   },
   {
     _id: uuid(),
@@ -159,6 +190,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [Sauvage1, Sauvage2, Sauvage3],
   },
   {
     _id: uuid(),
@@ -171,6 +203,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [Creed1, Creed2, Creed3],
   },
   {
     _id: uuid(),
@@ -184,6 +217,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [OneMillion1, OneMillion2, OneMillion3],
   },
   // mens & women
   {
