@@ -1,8 +1,14 @@
+// import React from "react";
+// import Modal from "react-modal";
 // import { Link } from "react-router-dom";
 // import { useCart } from "../../contexts/cartContext";
+// import ProductCarousel from "../ProductCarousel/ProductCarousel";
+
+// Modal.setAppElement("#root");
 
 // const CartCard = ({ product }) => {
-//   const { title, qty, price, image, id } = product;
+//   const { title, qty, price, image, id, additionalImages } = product;
+//   const [modalIsOpen, setIsOpen] = React.useState(false);
 
 //   const {
 //     removeFromCartHandler,
@@ -11,10 +17,58 @@
 //     loading,
 //   } = useCart();
 
+//   function openModal() {
+//     setIsOpen(true);
+//   }
+
+//   function closeModal() {
+//     setIsOpen(false);
+//   }
+
+//   const customStyles = {
+//     overlay: {
+//       backgroundColor: "rgba(0, 0, 0, 0.75)",
+//       backdropFilter: "blur(5px)",
+//     },
+//     content: {
+//       top: "50%",
+//       left: "50%",
+//       right: "auto",
+//       bottom: "auto",
+//       marginRight: "-50%",
+//       transform: "translate(-50%, -50%)",
+//       borderRadius: "10px",
+//       padding: "20px",
+//       width: "90%",
+//       maxWidth: "600px",
+//     },
+//   };
+
 //   return (
 //     <div className="border border-primary rounded-lg bg-white shadow-md m-4 p-10 max-h-max">
 //       <div className="flex flex-col md:flex-row">
-//         <img src={image} className="sm:w-1/2 object-cover h-48" alt={title} />
+//         <button onClick={openModal}>
+//           <img
+//             src={image}
+//             className="w-[500px] object-cover h-48"
+//             alt={title}
+//           />
+//         </button>
+
+//         <Modal
+//           isOpen={modalIsOpen}
+//           onRequestClose={closeModal}
+//           contentLabel="Product Images"
+//           style={customStyles}
+//         >
+//           <ProductCarousel images={additionalImages} />
+//           <button
+//             onClick={closeModal}
+//             className="mt-4 p-2 bg-red-500 text-white rounded"
+//           >
+//             Close
+//           </button>
+//         </Modal>
 
 //         <div className="p-3">
 //           <Link to={`/products/${id}`} className="font-bold">
@@ -36,11 +90,6 @@
 //               <span className="px-4 text-center border border-primary rounded">
 //                 {qty}
 //               </span>
-//               {/* <input
-//                 type="number"
-//                 value={qty}
-//                 className="w-10 text-center border border-primary rounded"
-//               /> */}
 //               <button
 //                 className="border border-primary rounded-full px-2 mx-1"
 //                 onClick={() => updateQtyHandler(product, "increment")}
@@ -74,29 +123,16 @@
 
 import React from "react";
 import Modal from "react-modal";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../../contexts/cartContext";
+import ProductCarousel from "../ProductCarousel/ProductCarousel";
 
-Modal.setAppElement("#root"); // Add this line if you're using create-react-app
-
-const product = {
-  id: 1,
-  title: "Product Title",
-  qty: 1,
-  price: 99.99,
-  image: "https://example.com/main-image.jpg",
-  additionalImages: [
-    "https://example.com/image1.jpg",
-    "https://example.com/image2.jpg",
-    "https://example.com/image3.jpg",
-  ],
-};
+Modal.setAppElement("#root");
 
 const CartCard = ({ product }) => {
   const { title, qty, price, image, id, additionalImages } = product;
+
+  console.log(additionalImages);
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const {
@@ -114,12 +150,25 @@ const CartCard = ({ product }) => {
     setIsOpen(false);
   }
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "rgba(0, 0, 0, 0.75)",
+      padding: "20px",
+      border: "none",
+      width: "100%",
+      // maxWidth: "100%",
+      overflow: "hidden",
+    },
+    overlay: {
+      backgroundColor: "rgba(0, 0, 0, 0.75)",
+      backdropFilter: "blur(10px)",
+    },
   };
 
   return (
@@ -136,20 +185,16 @@ const CartCard = ({ product }) => {
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
-          contentLabel="Example Modal"
+          contentLabel="Product Images"
+          style={customStyles}
         >
-          <Slider {...settings}>
-            {additionalImages && additionalImages.length > 0 ? (
-              additionalImages.map((img, index) => (
-                <div key={index}>
-                  <img src={img} alt={title} />
-                </div>
-              ))
-            ) : (
-              <div>No additional images available</div>
-            )}
-          </Slider>
-          <button onClick={closeModal}>Close</button>
+          <ProductCarousel images={additionalImages} />
+          <button
+            onClick={closeModal}
+            className="absolute top-10 right-5 p-3 text-white rounded"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </Modal>
 
         <div className="p-3">

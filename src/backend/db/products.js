@@ -10,6 +10,33 @@ import menImage8 from "../../assets/forMens/8.png";
 import menImage9 from "../../assets/forMens/9.png";
 import menImage10 from "../../assets/forMens/10.png";
 import womenImage1 from "../../assets/forWomens/1.png";
+import FlowerBomb1 from "../../assets/forWomens/imgsWtihoutBG/flowerBomb1.jpg";
+import FlowerBomb2 from "../../assets/forWomens/imgsWtihoutBG/flowerBomb2.jpg";
+import FlowerBomb3 from "../../assets/forWomens/imgsWtihoutBG/flowerBomb3.jpg";
+import Janan1 from "../../assets/forWomens/imgsWtihoutBG/janan1.jpg";
+import Janan2 from "../../assets/forWomens/imgsWtihoutBG/janan2.jpg";
+import GucciRush1 from "../../assets/forWomens/imgsWtihoutBG/gucciRush1.jpg";
+import GucciRush2 from "../../assets/forWomens/imgsWtihoutBG/gucciRush2.jpg";
+import GucciRush3 from "../../assets/forWomens/imgsWtihoutBG/gucciRush3.jpg";
+import JAdore1 from "../../assets/forWomens/imgsWtihoutBG/jAdore1.jpg";
+import JAdore2 from "../../assets/forWomens/imgsWtihoutBG/jAdore2.jpg";
+import JAdore3 from "../../assets/forWomens/imgsWtihoutBG/jAdore3.jpg";
+import BombShell1 from "../../assets/forWomens/imgsWtihoutBG/bombShell1.jpg";
+import BombShell2 from "../../assets/forWomens/imgsWtihoutBG/bombShell2.jpg";
+import VercasePink1 from "../../assets/forWomens/imgsWtihoutBG/versacePink1.jpg";
+import VercasePink2 from "../../assets/forWomens/imgsWtihoutBG/versacePink2.jpg";
+import PoisionDoir1 from "../../assets/forWomens/imgsWtihoutBG/pasionDoir1.jpg";
+import PoisionDoir2 from "../../assets/forWomens/imgsWtihoutBG/pasionDoir2.jpg";
+import PoisionDoir3 from "../../assets/forWomens/imgsWtihoutBG/pasionDoir3.jpg";
+import GucciFlora1 from "../../assets/forWomens/imgsWtihoutBG/gucciFlora1.jpg";
+import GucciFlora2 from "../../assets/forWomens/imgsWtihoutBG/gucciFlora2.jpg";
+import GucciFlora3 from "../../assets/forWomens/imgsWtihoutBG/gucciFlora3.jpg";
+import GucciBloom1 from "../../assets/forWomens/imgsWtihoutBG/gucciBloom1.jpg";
+import GucciBloom2 from "../../assets/forWomens/imgsWtihoutBG/gucciBloom2.jpg";
+import GucciBloom3 from "../../assets/forWomens/imgsWtihoutBG/gucciBloom3.jpg";
+import Gucci1 from "../../assets/forWomens/imgsWtihoutBG/gucci1.jpg";
+import Gucci2 from "../../assets/forWomens/imgsWtihoutBG/gucci2.jpg";
+import Gucci3 from "../../assets/forWomens/imgsWtihoutBG/gucci3.jpg";
 import womenImage2 from "../../assets/forWomens/2.png";
 import womenImage3 from "../../assets/forWomens/3.png";
 import womenImage4 from "../../assets/forWomens/4.png";
@@ -51,6 +78,11 @@ export const products = [
     rating: 4.2,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [
+      "https://via.placeholder.com/150/92c952",
+      "https://via.placeholder.com/150/771796",
+      "https://via.placeholder.com/150/24f355",
+    ],
   },
   {
     _id: uuid(),
@@ -264,6 +296,7 @@ export const products = [
     rating: 4.1,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [FlowerBomb1, FlowerBomb2, FlowerBomb3],
   },
   {
     _id: uuid(),
@@ -271,13 +304,13 @@ export const products = [
       "A charming and romantic fragrance with floral and fruity accords, complemented by vanilla and musk (For Women)",
     brand: "ENVY",
     image: womenImage2,
-    // "https://rukminim1.flixcart.com/image/416/416/kkyc9zk0/perfume/8/e/u/white-eau-de-toilette-envy-men-original-imagy6h6cz8aqxw6.jpeg",
     price: "449",
     discount: "17",
     category: "women",
     rating: 3.9,
     inStock: true,
     fastDelivery: true,
+    additionalImages: [Janan1, Janan2],
   },
   {
     _id: uuid(),
@@ -291,6 +324,7 @@ export const products = [
     rating: 1.2,
     inStock: true,
     fastDelivery: true,
+    additionalImages: [GucciRush1, GucciRush2, GucciRush3],
   },
   {
     _id: uuid(),
@@ -304,6 +338,7 @@ export const products = [
     rating: 4.8,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [JAdore1, JAdore2, JAdore3],
   },
   {
     _id: uuid(),
@@ -317,8 +352,8 @@ export const products = [
     rating: 2.5,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [BombShell1, BombShell2],
   },
-
   {
     _id: uuid(),
     title:
@@ -331,8 +366,8 @@ export const products = [
     rating: 4.5,
     inStock: true,
     fastDelivery: false,
+    additionalImages: [VercasePink1, VercasePink2],
   },
-
   {
     _id: uuid(),
     title:
@@ -345,6 +380,7 @@ export const products = [
     rating: 4.4,
     inStock: true,
     fastDelivery: true,
+    additionalImages: [PoisionDoir1, PoisionDoir2, PoisionDoir3],
   },
   {
     _id: uuid(),
@@ -358,6 +394,7 @@ export const products = [
     rating: 4.4,
     inStock: true,
     fastDelivery: true,
+    additionalImages: [GucciFlora1, GucciFlora2, GucciFlora3],
   },
   {
     _id: uuid(),
@@ -371,6 +408,7 @@ export const products = [
     rating: 4.4,
     inStock: true,
     fastDelivery: true,
+    additionalImages: [GucciBloom1, GucciBloom2, GucciBloom3],
   },
   {
     _id: uuid(),
@@ -383,5 +421,6 @@ export const products = [
     rating: 4.4,
     inStock: true,
     fastDelivery: true,
+    additionalImages: [Gucci1, Gucci2, Gucci3],
   },
 ];
