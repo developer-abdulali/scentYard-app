@@ -1,182 +1,49 @@
-// import React from "react";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-// const CustomPrevArrow = (props) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={`${className} custom-prev-arrow`}
-//       style={{ ...style, display: "block", left: "-25px", zIndex: 1 }}
-//       onClick={onClick}
-//     >
-//       <i className="fas fa-chevron-left text-2xl text-white"></i>
-//     </div>
-//   );
-// };
-
-// const CustomNextArrow = (props) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={`${className} custom-next-arrow`}
-//       style={{ ...style, display: "block", right: "-25px", zIndex: 1 }}
-//       onClick={onClick}
-//     >
-//       <i className="fas fa-chevron-right text-2xl text-white"></i>
-//     </div>
-//   );
-// };
-
-// const ProductCarousel = ({ images }) => {
-//   const settings = {
-//     dots: false,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     prevArrow: <CustomPrevArrow />,
-//     nextArrow: <CustomNextArrow />,
-//     responsive: [
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//           infinite: true,
-//           dots: false,
-//         },
-//       },
-//       {
-//         breakpoint: 600,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//           initialSlide: 1,
-//         },
-//       },
-//       {
-//         breakpoint: 480,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//         },
-//       },
-//     ],
-//   };
-
-//   return (
-//     <div className="carousel-container max-w-lg mx-auto h-full">
-//       <Slider {...settings}>
-//         {images && images.length > 0 ? (
-//           images.map((img, index) => (
-//             <div key={index} className="container mx-auto h-full">
-//               <img
-//                 src={img}
-//                 alt={`Additional Image ${index + 1}`}
-//                 className="w-full h-screen object-cover"
-//                 onError={(e) => {
-//                   console.error(`Failed to load image: ${img}`, e);
-//                 }}
-//               />
-//             </div>
-//           ))
-//         ) : (
-//           <div>No additional images available</div>
-//         )}
-//       </Slider>
-//     </div>
-//   );
-// };
-
-// export default ProductCarousel;
-
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} absolute right-3 text-white text-2xl fas fa-chevron-right !important`}
-      style={{ ...style, display: "block", position: "absolute" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} absolute left-3 text-white text-2xl fas fa-chevron-left !important`}
-      style={{ ...style, display: "block", position: "absolute" }}
-      onClick={onClick}
-    />
-  );
-}
+import React, { useState } from "react";
+import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 
 const ProductCarousel = ({ images }) => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrevClick = () => {
+    setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+  };
+
+  const handleNextClick = () => {
+    setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
   };
 
   return (
-    <div className="carousel-container max-w-lg mx-auto h-full">
-      <Slider {...settings} className="relative">
+    <>
+      <div className="h-screen relative flex items-center justify-between p-4">
+        <button
+          className="absolute left-0 text-white bg-gray-500 md:bg-transparent px-4 py-2 rounded-full focus:outline-none "
+          onClick={handlePrevClick}
+        >
+          <HiArrowNarrowLeft />
+        </button>
         {images && images.length > 0 ? (
-          images.map((img, index) => (
-            <div key={index} className="container mx-auto h-full">
-              <img
-                src={img}
-                alt={`Additional Image ${index + 1}`}
-                className="w-full h-screen object-cover"
-                onError={(e) => {
-                  console.error(`Failed to load image: ${img}`, e);
-                }}
-              />
-            </div>
-          ))
+          <div
+            key={currentIndex}
+            id={`item${currentIndex + 1}`}
+            className="flex-grow"
+          >
+            <img
+              src={images[currentIndex]}
+              className="w-full h-full object-cover md:max-w-lg md:mx-auto md:h-screen"
+              alt={`Carousel item ${currentIndex + 1}`}
+            />
+          </div>
         ) : (
-          <div>No additional images available</div>
+          <div>Image not found</div>
         )}
-      </Slider>
-    </div>
+        <button
+          className="absolute right-0 text-white px-4 z-10 bg-gray-500 md:bg-transparent py-2 rounded-full focus:outline-none "
+          onClick={handleNextClick}
+        >
+          <HiArrowNarrowRight />
+        </button>
+      </div>
+    </>
   );
 };
 

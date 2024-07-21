@@ -58,7 +58,3 @@ section.main-section {
 button:active {
   transform: translateY(1px);
 }
-
-/* .slick-arrow:before {
-  color: red !important;
-} */

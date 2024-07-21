@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     // <nav className="sticky !top-0 z-10 flex items-center justify-between bg-white py-3 px-4 sm:py-5 sm:px-10 mb-6 sm:mb-10">
-    <nav className="flex items-center justify-between bg-white py-3 px-4 sm:py-5 sm:px-10 mb-6 shadow-md">
+    <nav className="flex items-center justify-between bg-white py-3 px-4 sm:px-10 shadow-md">
       <div className="flex items-center gap-2 mb-3 sm:mb-0">
         <button
           onClick={() => navigate("/")}

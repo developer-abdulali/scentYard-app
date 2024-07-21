@@ -5,6 +5,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { HorizontalCard } from "../../components/HorizontalCard/HorizontalCard";
 import { categories } from "../../backend/db/categories";
 import { useProducts } from "../../contexts/productContext";
+import Hero from "../../components/Hero Section/Hero";
 
 const Home = () => {
   const { productState, productDispatch, filterTypes } = useProducts();
@@ -16,35 +17,31 @@ const Home = () => {
 
       <section className="main-section">
         {/* hero section */}
-        <div className="hero">
+        <Hero />
+        {/* <div className="hero">
           <div className="hero-img">
-            {/* <div className="hero-img"> */}
             <img
               src="/assets/hero-img.jpg"
               alt="Image"
               className="w-full object-cover"
             />
-            {/* <img className="resp-img" src="/assets/hero-img.jpg" alt="Image" /> */}
           </div>
 
           <div className="hero-content leading-tight">
             <div>
               Everything's better with a bit of fragrance
               <p className="text-xl my-4 text-[#000000]">
-                {/* <p className="sub-title"> */}
                 Choose from our wide variety of fragrances
               </p>
               <Link
                 to="/products"
                 className="bg-primary hover:bg-primary/90 duration-300 text-2xl text-white py-2 px-4 font-normal"
               >
-                {/* <Link to="/products" className="hero-action "> */}
-
                 <button className="btn btn-primary">Shop Now</button>
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center my-10 mx-4">
           <div className="flex flex-col items-center">
