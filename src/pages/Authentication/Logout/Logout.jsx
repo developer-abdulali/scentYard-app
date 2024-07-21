@@ -1,12 +1,8 @@
-import { Navbar } from "../../../components/Navbar/Navbar";
-import { Footer } from "../../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 
 const Logout = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-
       <section className="flex-grow flex flex-col items-center justify-center">
         <div className="border border-primary p-4 max-w-lg text-center">
           <div className="text-6xl text-blue-500">
@@ -28,8 +24,6 @@ const Logout = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

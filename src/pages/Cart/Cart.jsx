@@ -45,12 +45,10 @@
 //       <Footer />
 //     </div>
 //   );
-// };
+// };s
 
 // export { Cart };
 
-import { Footer } from "../../components/Footer/Footer";
-import { Navbar } from "../../components/Navbar/Navbar";
 import { CartCard } from "../../components/CartCard/CartCard";
 import { CartPrice } from "../../components/CartPrice/CartPrice";
 import { useCart } from "../../contexts/cartContext";
@@ -61,8 +59,6 @@ const Cart = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-
       <section className="flex-grow flex flex-col items-center justify-center">
         <div className="w-full max-w-6xl px-4">
           <h3 className="text-2xl font-bold text-center">
@@ -92,8 +88,6 @@ const Cart = () => {
           )}
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

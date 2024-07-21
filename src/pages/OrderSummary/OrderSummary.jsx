@@ -1,6 +1,4 @@
 import { useParams, Link } from "react-router-dom";
-import { Navbar } from "../../components/Navbar/Navbar";
-import { Footer } from "../../components/Footer/Footer";
 import { useOrder } from "../../contexts/orderContext";
 
 export const OrderSummary = () => {
@@ -13,8 +11,6 @@ export const OrderSummary = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-
       <section className="flex-grow flex flex-col items-center justify-center bg-gray-100">
         {latestOrder ? (
           <>
@@ -92,8 +88,6 @@ export const OrderSummary = () => {
           </div>
         )}
       </section>
-
-      <Footer />
     </div>
   );
 };

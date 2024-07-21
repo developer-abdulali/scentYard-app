@@ -1,13 +1,9 @@
 import "./UserAccount.css";
 import { NavLink, Outlet } from "react-router-dom";
-import { Footer } from "../../components/Footer/Footer";
-import { Navbar } from "../../components/Navbar/Navbar";
 
 const UserAccount = () => {
   return (
     <div className="page-wrapper">
-      <Navbar />
-
       <section className="main-section account-container">
         <h2 className="text-center">My Account</h2>
 
@@ -39,8 +35,6 @@ const UserAccount = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

@@ -1,5 +1,3 @@
-import { Footer } from "../../components/Footer/Footer";
-import { Navbar } from "../../components/Navbar/Navbar";
 import { useWishlist } from "../../contexts/wishlistContext";
 import { ProductCard } from "../../components/ProductCard/ProductCard";
 import { Link } from "react-router-dom";
@@ -9,8 +7,6 @@ const Wishlist = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-
       <section className="flex-grow flex flex-col items-center justify-center">
         <div className="max-w-[80%] mx-auto">
           <div className="text-3xl font-bold text-center">
@@ -33,8 +29,6 @@ const Wishlist = () => {
           )}
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

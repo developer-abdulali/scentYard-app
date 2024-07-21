@@ -1,4 +1,6 @@
 import "./App.css";
+import { Footer } from "./components/Footer/Footer";
+import { Navbar } from "./components/Navbar/Navbar";
 import { ScrollToTop } from "./components/ScrollToTop/ScrollToTop";
 import { NavRoutes } from "./Routes/NavRoutes";
 import { useEffect } from "react";
@@ -11,6 +13,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Toaster
         position="top-right"
         reverseOrder={false}
@@ -19,6 +22,7 @@ function App() {
         }}
       />
       <NavRoutes />
+      <Footer />
       <ScrollToTop />
     </div>
   );

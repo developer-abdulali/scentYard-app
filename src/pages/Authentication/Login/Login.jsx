@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Navbar } from "../../../components/Navbar/Navbar";
-import { Footer } from "../../../components/Footer/Footer";
 import { useAuth } from "../../../contexts/authContext";
 import { loginService } from "../../../services/authServices";
 import { Link } from "react-router-dom";
@@ -65,8 +63,6 @@ const Login = () => {
 
   return (
     <div className="page-wrapper flex flex-col min-h-screen">
-      <Navbar />
-
       <section className="flex-grow flex items-center justify-center p-4">
         {loading ? (
           <Loader />
@@ -150,8 +146,6 @@ const Login = () => {
           </div>
         )}
       </section>
-
-      <Footer />
     </div>
   );
 };

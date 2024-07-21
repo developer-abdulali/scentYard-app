@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
-import { Navbar } from "../../components/Navbar/Navbar";
-import { Footer } from "../../components/Footer/Footer";
 
 const PageNotFound = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-
       <section className="flex-grow flex flex-col items-center justify-center">
         <img
           src="/assets/404.svg"
@@ -24,8 +20,6 @@ const PageNotFound = () => {
           </Link>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

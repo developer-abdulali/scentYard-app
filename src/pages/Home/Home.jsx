@@ -1,7 +1,5 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { Navbar } from "../../components/Navbar/Navbar";
-import { Footer } from "../../components/Footer/Footer";
 import { HorizontalCard } from "../../components/HorizontalCard/HorizontalCard";
 import { categories } from "../../backend/db/categories";
 import { useProducts } from "../../contexts/productContext";
@@ -13,8 +11,6 @@ const Home = () => {
 
   return (
     <div className="page-wrapper overflow-hidden">
-      <Navbar />
-
       <section className="main-section">
         {/* hero section */}
         <Hero />
@@ -128,8 +124,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

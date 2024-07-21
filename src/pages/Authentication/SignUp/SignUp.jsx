@@ -1,5 +1,3 @@
-import { Navbar } from "../../../components/Navbar/Navbar";
-import { Footer } from "../../../components/Footer/Footer";
 import { useState } from "react";
 import { signupService } from "../../../services/authServices";
 import { Loader } from "../../../components/Loader/Loader";
@@ -63,8 +61,6 @@ const SignUp = () => {
 
   return (
     <div className="page-wrapper flex flex-col min-h-screen">
-      <Navbar />
-
       <section className="flex-grow flex items-center justify-center p-4">
         {loading ? (
           <Loader />
@@ -210,8 +206,6 @@ const SignUp = () => {
           </div>
         )}
       </section>
-
-      <Footer />
     </div>
   );
 };

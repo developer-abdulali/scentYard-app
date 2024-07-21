@@ -100,8 +100,6 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Navbar } from "../../components/Navbar/Navbar";
-import { Footer } from "../../components/Footer/Footer";
 import { useAddress } from "../../contexts/addressContext";
 import { useCart } from "../../contexts/cartContext";
 import { OrderDetails } from "./OrderDetails";
@@ -126,8 +124,6 @@ export const Checkout = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-
       <section className="flex-grow flex flex-col items-center justify-center bg-gray-100 px-4">
         <h3 className="text-2xl font-bold text-center my-4">Checkout</h3>
 
@@ -192,8 +188,6 @@ export const Checkout = () => {
           </div>
         )}
       </section>
-
-      <Footer />
     </div>
   );
 };
