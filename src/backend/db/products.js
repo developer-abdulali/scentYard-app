@@ -11,61 +11,45 @@ import menImage9 from "../../assets/forMens/9.png";
 import menImage10 from "../../assets/forMens/10.png";
 import CoolWater1 from "../../assets/forMens/imgsWtihoutBG/coolWater1.jpg";
 import CoolWater2 from "../../assets/forMens/imgsWtihoutBG/coolWater2.jpg";
-import CoolWater3 from "../../assets/forMens/imgsWtihoutBG/coolWater3.jpg";
 import AzzaroWanted1 from "../../assets/forMens/imgsWtihoutBG/azzaro1.jpg";
 import AzzaroWanted2 from "../../assets/forMens/imgsWtihoutBG/azzaro2.jpg";
 import Bulgari1 from "../../assets/forMens/imgsWtihoutBG/bulgari1.jpg";
 import Bulgari2 from "../../assets/forMens/imgsWtihoutBG/bulgari2.jpg";
-import Bulgari3 from "../../assets/forMens/imgsWtihoutBG/bulgari3.jpg";
 import Eternity1 from "../../assets/forMens/imgsWtihoutBG/eternity1.jpg";
 import Eternity2 from "../../assets/forMens/imgsWtihoutBG/eternity2.jpg";
-import Eternity3 from "../../assets/forMens/imgsWtihoutBG/eternity3.jpg";
 import Eros1 from "../../assets/forMens/imgsWtihoutBG/eros1.jpg";
 import Eros2 from "../../assets/forMens/imgsWtihoutBG/eros2.jpg";
-import Eros3 from "../../assets/forMens/imgsWtihoutBG/eros3.jpg";
 import Dunahil1 from "../../assets/forMens/imgsWtihoutBG/dunahil1.jpg";
 import Dunahil2 from "../../assets/forMens/imgsWtihoutBG/dunahil2.jpg";
-import Dunahil3 from "../../assets/forMens/imgsWtihoutBG/dunahil3.jpg";
 import BlueTheChannel1 from "../../assets/forMens/imgsWtihoutBG/blueTheChannel1.jpg";
 import BlueTheChannel2 from "../../assets/forMens/imgsWtihoutBG/blueTheChannel2.jpg";
-import BlueTheChannel3 from "../../assets/forMens/imgsWtihoutBG/blueTheChannel3.jpg";
 import Sauvage1 from "../../assets/forMens/imgsWtihoutBG/sauvage1.jpg";
 import Sauvage2 from "../../assets/forMens/imgsWtihoutBG/sauvage2.jpg";
-import Sauvage3 from "../../assets/forMens/imgsWtihoutBG/sauvage3.jpg";
 import Creed1 from "../../assets/forMens/imgsWtihoutBG/creed1.jpg";
 import Creed2 from "../../assets/forMens/imgsWtihoutBG/creed2.jpg";
-import Creed3 from "../../assets/forMens/imgsWtihoutBG/creed3.jpg";
 import OneMillion1 from "../../assets/forMens/imgsWtihoutBG/1million1.jpg";
 import OneMillion2 from "../../assets/forMens/imgsWtihoutBG/1million2.jpg";
-import OneMillion3 from "../../assets/forMens/imgsWtihoutBG/1million3.jpg";
 import womenImage1 from "../../assets/forWomens/1.png";
 import FlowerBomb1 from "../../assets/forWomens/imgsWtihoutBG/flowerBomb1.jpg";
 import FlowerBomb2 from "../../assets/forWomens/imgsWtihoutBG/flowerBomb2.jpg";
-import FlowerBomb3 from "../../assets/forWomens/imgsWtihoutBG/flowerBomb3.jpg";
 import Janan1 from "../../assets/forWomens/imgsWtihoutBG/janan1.jpg";
 import Janan2 from "../../assets/forWomens/imgsWtihoutBG/janan2.jpg";
 import GucciRush1 from "../../assets/forWomens/imgsWtihoutBG/gucciRush1.jpg";
 import GucciRush2 from "../../assets/forWomens/imgsWtihoutBG/gucciRush2.jpg";
-import GucciRush3 from "../../assets/forWomens/imgsWtihoutBG/gucciRush3.jpg";
 import JAdore1 from "../../assets/forWomens/imgsWtihoutBG/jAdore1.jpg";
 import JAdore2 from "../../assets/forWomens/imgsWtihoutBG/jAdore2.jpg";
-import JAdore3 from "../../assets/forWomens/imgsWtihoutBG/jAdore3.jpg";
 import BombShell1 from "../../assets/forWomens/imgsWtihoutBG/bombShell1.jpg";
 import BombShell2 from "../../assets/forWomens/imgsWtihoutBG/bombShell2.jpg";
 import VercasePink1 from "../../assets/forWomens/imgsWtihoutBG/versacePink1.jpg";
 import VercasePink2 from "../../assets/forWomens/imgsWtihoutBG/versacePink2.jpg";
 import PoisionDoir1 from "../../assets/forWomens/imgsWtihoutBG/pasionDoir1.jpg";
 import PoisionDoir2 from "../../assets/forWomens/imgsWtihoutBG/pasionDoir2.jpg";
-import PoisionDoir3 from "../../assets/forWomens/imgsWtihoutBG/pasionDoir3.jpg";
 import GucciFlora1 from "../../assets/forWomens/imgsWtihoutBG/gucciFlora1.jpg";
 import GucciFlora2 from "../../assets/forWomens/imgsWtihoutBG/gucciFlora2.jpg";
-import GucciFlora3 from "../../assets/forWomens/imgsWtihoutBG/gucciFlora3.jpg";
 import GucciBloom1 from "../../assets/forWomens/imgsWtihoutBG/gucciBloom1.jpg";
 import GucciBloom2 from "../../assets/forWomens/imgsWtihoutBG/gucciBloom2.jpg";
-import GucciBloom3 from "../../assets/forWomens/imgsWtihoutBG/gucciBloom3.jpg";
 import Gucci1 from "../../assets/forWomens/imgsWtihoutBG/gucci1.jpg";
 import Gucci2 from "../../assets/forWomens/imgsWtihoutBG/gucci2.jpg";
-import Gucci3 from "../../assets/forWomens/imgsWtihoutBG/gucci3.jpg";
 import womenImage2 from "../../assets/forWomens/2.png";
 import womenImage3 from "../../assets/forWomens/3.png";
 import womenImage4 from "../../assets/forWomens/4.png";
@@ -94,7 +78,7 @@ export const products = [
     rating: 4.3,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [CoolWater1, CoolWater2, CoolWater3],
+    additionalImages: [CoolWater1, CoolWater2],
   },
   {
     _id: uuid(),
@@ -122,7 +106,7 @@ export const products = [
     rating: 4.2,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [Bulgari1, Bulgari2, Bulgari3],
+    additionalImages: [Bulgari1, Bulgari2],
   },
   {
     _id: uuid(),
@@ -136,7 +120,7 @@ export const products = [
     rating: 3.8,
     inStock: true,
     fastDelivery: true,
-    additionalImages: [Eternity1, Eternity2, Eternity3],
+    additionalImages: [Eternity1, Eternity2],
   },
   {
     _id: uuid(),
@@ -150,7 +134,7 @@ export const products = [
     rating: 4.2,
     inStock: true,
     fastDelivery: true,
-    additionalImages: [Eros1, Eros2, Eros3],
+    additionalImages: [Eros1, Eros2],
   },
   {
     _id: uuid(),
@@ -163,7 +147,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [Dunahil1, Dunahil2, Dunahil3],
+    additionalImages: [Dunahil1, Dunahil2],
   },
   {
     _id: uuid(),
@@ -177,7 +161,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [BlueTheChannel1, BlueTheChannel2, BlueTheChannel3],
+    additionalImages: [BlueTheChannel1, BlueTheChannel2],
   },
   {
     _id: uuid(),
@@ -190,7 +174,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [Sauvage1, Sauvage2, Sauvage3],
+    additionalImages: [Sauvage1, Sauvage2],
   },
   {
     _id: uuid(),
@@ -203,7 +187,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [Creed1, Creed2, Creed3],
+    additionalImages: [Creed1, Creed2],
   },
   {
     _id: uuid(),
@@ -217,7 +201,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [OneMillion1, OneMillion2, OneMillion3],
+    additionalImages: [OneMillion1, OneMillion2],
   },
   // mens & women
   {
@@ -330,7 +314,7 @@ export const products = [
     rating: 4.1,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [FlowerBomb1, FlowerBomb2, FlowerBomb3],
+    additionalImages: [FlowerBomb1, FlowerBomb2],
   },
   {
     _id: uuid(),
@@ -358,7 +342,7 @@ export const products = [
     rating: 1.2,
     inStock: true,
     fastDelivery: true,
-    additionalImages: [GucciRush1, GucciRush2, GucciRush3],
+    additionalImages: [GucciRush1, GucciRush2],
   },
   {
     _id: uuid(),
@@ -372,7 +356,7 @@ export const products = [
     rating: 4.8,
     inStock: true,
     fastDelivery: false,
-    additionalImages: [JAdore1, JAdore2, JAdore3],
+    additionalImages: [JAdore1, JAdore2],
   },
   {
     _id: uuid(),
@@ -414,7 +398,7 @@ export const products = [
     rating: 4.4,
     inStock: true,
     fastDelivery: true,
-    additionalImages: [PoisionDoir1, PoisionDoir2, PoisionDoir3],
+    additionalImages: [PoisionDoir1, PoisionDoir2],
   },
   {
     _id: uuid(),
@@ -428,7 +412,7 @@ export const products = [
     rating: 4.4,
     inStock: true,
     fastDelivery: true,
-    additionalImages: [GucciFlora1, GucciFlora2, GucciFlora3],
+    additionalImages: [GucciFlora1, GucciFlora2],
   },
   {
     _id: uuid(),
@@ -442,7 +426,7 @@ export const products = [
     rating: 4.4,
     inStock: true,
     fastDelivery: true,
-    additionalImages: [GucciBloom1, GucciBloom2, GucciBloom3],
+    additionalImages: [GucciBloom1, GucciBloom2],
   },
   {
     _id: uuid(),
@@ -455,6 +439,6 @@ export const products = [
     rating: 4.4,
     inStock: true,
     fastDelivery: true,
-    additionalImages: [Gucci1, Gucci2, Gucci3],
+    additionalImages: [Gucci1, Gucci2],
   },
 ];

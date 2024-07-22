@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useWishlist } from "../../contexts/wishlistContext";
 import { useCart } from "../../contexts/cartContext";
@@ -9,6 +9,8 @@ import { useProducts } from "../../contexts/productContext";
 const SingleProduct = () => {
   const [currentImage, setCurrentImage] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   const { productId } = useParams();
 
@@ -33,20 +35,50 @@ const SingleProduct = () => {
   const itemInCart = cartState.find((item) => item.id === currentProduct.id);
 
   // Add current product image to additionalImages array
-  const additionalImages = [
-    currentProduct.image,
-    ...currentProduct.additionalImages,
-  ];
+  // const additionalImages = [
+  //   currentProduct?.image,
+  //   ...currentProduct?.additionalImages,
+  // ];
+  const additionalImages = currentProduct?.additionalImages
+    ? [currentProduct.image, ...currentProduct.additionalImages]
+    : [currentProduct?.image];
+
+  useEffect(() => {
+    if (touchStart && touchEnd) {
+      const deltaX = touchStart - touchEnd;
+      if (deltaX > 50) {
+        // Swipe left
+        setActiveIndex((prevIndex) =>
+          prevIndex === additionalImages?.length - 1 ? 0 : prevIndex + 1
+        );
+      } else if (deltaX < -50) {
+        // Swipe right
+        setActiveIndex((prevIndex) =>
+          prevIndex === 0 ? additionalImages?.length - 1 : prevIndex - 1
+        );
+      }
+      setTouchStart(null);
+      setTouchEnd(null);
+    }
+  }, [touchStart, touchEnd, additionalImages]);
+
+  useEffect(() => {
+    setCurrentImage(additionalImages[activeIndex]);
+  }, [activeIndex, additionalImages]);
 
   return (
-    <div className="page-wrapper ">
-      <section className="flex items-center justify-center ">
+    <div className="overflow-hidden">
+      <section className="flex items-center justify-center">
         {currentProduct ? (
-          <section className="max-w-4xl p-2 mx-4 my-2 bg-white  sm:flex sm:gap-6">
-            <div className="relative sm:w-1/2">
+          <section className="max-w-4xl p-2 mx-4 my-2 bg-white sm:flex sm:gap-6">
+            <div
+              className="relative sm:w-1/2"
+              onTouchStart={(e) => setTouchStart(e.targetTouches[0].clientX)}
+              onTouchEnd={(e) => setTouchEnd(e.changedTouches[0].clientX)}
+            >
               <img
-                src={currentImage || currentProduct.image} // Use
-                className="w-full object-cover h-[35rem] rounded-lg cursor-pointer"
+                src={currentImage || currentProduct?.image}
+                className="w-full object-cover h-[25rem] md:h-[30rem] rounded-lg"
                 alt={currentProduct.title}
               />
               {/* addtional imgs component */}
@@ -68,8 +100,11 @@ const SingleProduct = () => {
                 ></i>
               </button>
             </div>
-            <div className="sm:w-1/2">
-              <div className="text-2xl font-bold" title={currentProduct.title}>
+            <div className="sm:w-1/2 mx-3 md:mx-0">
+              <div
+                className="mt-5 md:mt-0 text-xl md:text-2xl font-bold"
+                title={currentProduct.title}
+              >
                 {currentProduct.title}
               </div>
               <div className="inline-flex items-center px-2 py-1 mt-2 text-sm text-white bg-primary rounded-md">
@@ -157,7 +192,7 @@ const AdditionalImages = ({
 }) => {
   return (
     <div className="flex gap-4 mt-4">
-      {images.map((image, index) => (
+      {images?.map((image, index) => (
         <div
           key={index}
           className={`w-[7rem] h-[7rem] rounded-lg cursor-pointer border-2 ${
