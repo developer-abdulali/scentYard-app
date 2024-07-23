@@ -279,12 +279,19 @@ export const OrderDetails = () => {
           navigate(`/order/${orderId}`);
         }
       },
-
       prefill: {
-        name: `${user.firstName} ${user.lastName}`,
-        email: user.email,
+        name:
+          user && user.firstName && user.lastName
+            ? `${user.firstName} ${user.lastName}`
+            : "Name not available",
+        email: user && user.email ? user.email : "Email not available",
         contact: "93225088143",
       },
+      // prefill: {
+      //   name: `${user.firstName} ${user.lastName}`,
+      //   email: user.email,
+      //   contact: "93225088143",
+      // },
     };
 
     const paymentObject = new window.Razorpay(options);
@@ -354,7 +361,7 @@ export const OrderDetails = () => {
         Deliver To
       </div>
 
-      <div className="space-y-1 md:space-y-2 lg:space-y-3 mt-2 md:mt-4 lg:mt-6">
+      {/* <div className="space-y-1 md:space-y-2 lg:space-y-3 mt-2 md:mt-4 lg:mt-6">
         {currentAddress ? (
           <>
             <div className="font-bold text-sm md:text-base lg:text-lg">
@@ -376,8 +383,39 @@ export const OrderDetails = () => {
             Add an address to proceed.
           </p>
         )}
-      </div>
+      </div> */}
 
+      <div className="space-y-1 md:space-y-2 lg:space-y-3 mt-2 md:mt-4 lg:mt-6">
+        {currentAddress ? (
+          <>
+            <div className="font-bold text-sm md:text-base lg:text-lg">
+              {currentAddress.firstName && currentAddress.lastName
+                ? `${currentAddress.firstName} ${currentAddress.lastName}`
+                : "Name not available"}
+            </div>
+            {/* <div className="font-bold text-sm md:text-base lg:text-lg">
+              {currentAddress.firstName} {currentAddress.lastName}
+            </div> */}
+            <div className="text-sm md:text-base lg:text-lg">
+              {currentAddress.address}
+              {/* {currentAddress.street} {currentAddress.city} -{" "} */}
+              {/* {currentAddress.zipcode} */}
+            </div>
+            <div className="text-sm md:text-base lg:text-lg">
+              {currentAddress.city} - {currentAddress.postalCode}
+              {/* {currentAddress.state} {currentAddress.country} */}
+            </div>
+            <div className="text-sm md:text-base lg:text-lg">
+              {currentAddress.phone}
+              {/* {currentAddress.mobile} */}
+            </div>
+          </>
+        ) : (
+          <p className="text-sm md:text-base lg:text-lg">
+            Add an address to proceed.
+          </p>
+        )}
+      </div>
       <button
         className={`bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded w-full mt-4 md:mt-6 lg:mt-8 ${
           !selectedAddrId ? "opacity-50 cursor-not-allowed" : ""

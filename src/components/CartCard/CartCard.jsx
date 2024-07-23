@@ -5,8 +5,6 @@ import { useCart } from "../../contexts/cartContext";
 const CartCard = ({ product }) => {
   const { title, qty, price, image, id } = product;
 
-  console.log(additionalImages);
-
   const {
     removeFromCartHandler,
     updateQtyHandler,
@@ -17,7 +15,8 @@ const CartCard = ({ product }) => {
   return (
     <div className="border border-primary rounded-lg bg-white shadow-md m-4 p-10 max-h-max">
       <div className="flex flex-col md:flex-row">
-        <img src={image} className="w-[500px] object-cover h-48" alt={title} />
+        <img src={image} className=" object-cover h-48" alt={title} />
+        {/* <img src={image} className="w-[500px] object-cover h-48" alt={title} /> */}
 
         <div className="p-3">
           <Link to={`/products/${id}`} className="font-bold">

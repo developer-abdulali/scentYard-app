@@ -204,19 +204,33 @@ const CartProvider = ({ children }) => {
     }
   }, [isAuth]);
 
-  const addToCartHandler = async (product) => {
-    if (isAuth) {
-      setLoading(true);
-      const { data, status } = await addToCart(product, token);
-      setLoading(false);
+  // const addToCartHandler = async (product) => {
+  //   if (isAuth) {
+  //     setLoading(true);
+  //     const { data, status } = await addToCart(product, token);
+  //     setLoading(false);
 
-      if (status === 201) {
-        toast.success("Product added to Cart!");
-        cartDispatch({ type: "SET_CART_DATA", payload: data.cart });
-      }
-    } else {
-      navigate("/login");
+  //     if (status === 201) {
+  //       toast.success("Product added to Cart!");
+  //       cartDispatch({ type: "SET_CART_DATA", payload: data.cart });
+  //     }
+  //   } else {
+  //     navigate("/login");
+  //   }
+  // };
+  const addToCartHandler = async (product) => {
+    // if (isAuth) {
+    // setLoading(true);
+    const { data, status } = await addToCart(product, token);
+    // setLoading(false);
+
+    if (status === 201) {
+      toast.success("Product added to Cart!");
+      cartDispatch({ type: "SET_CART_DATA", payload: data.cart });
     }
+    // } else {
+    //   navigate("/login");
+    // }
   };
 
   const removeFromCartHandler = async (product) => {

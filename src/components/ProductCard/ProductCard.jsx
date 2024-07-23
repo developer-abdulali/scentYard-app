@@ -1,9 +1,7 @@
-// import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../contexts/wishlistContext";
 import { useCart } from "../../contexts/cartContext";
 import { useAuth } from "../../contexts/authContext";
-import { FaRegHeart } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
   const { _id, title, price, discount, discountedPrice, image, inStock, id } =
@@ -30,11 +28,9 @@ const ProductCard = ({ product }) => {
       </Link>
 
       <div>
-        {/* <div className={`${!inStock ? "bg-gray-200 " : ""}`}> */}
         <button
           onClick={() => toggleWishlist(product)}
           disabled={wishlistLoading}
-          // className="card-dismiss"
           className="absolute top-3 right-3 rounded-full text-primary"
         >
           <i
@@ -54,7 +50,6 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className="px-2 py-1">
-        {/* <div className={`px-2 py-1 ${!inStock ? "bg-gray-200" : ""}`}> */}
         <div className="flex items-center">
           <div className="text-lg font-medium">₹ {discountedPrice}</div>
           <div className="ml-2 text-sm text-gray-500 line-through">
@@ -74,14 +69,12 @@ const ProductCard = ({ product }) => {
           className={`w-full px-4 py-2 text-white bg-primary rounded-md hover:bg-primary/90 font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 ${
             !inStock ? "cursor-not-allowed" : ""
           }`}
-          onClick={
-            () => (itemInCart ? navigate("/cart") : addToCartHandler(product))
-            // isAuth && itemInCart ? navigate("/cart") : addToCartHandler(product)
+          onClick={() =>
+            itemInCart ? navigate("/cart") : addToCartHandler(product)
           }
           disabled={cartLoading || !inStock}
         >
           {itemInCart ? "Go To Cart" : "Add To Cart"}
-          {/* {isAuth && itemInCart ? "Go To Cart" : "Add To Cart"} */}
         </button>
       </div>
     </div>

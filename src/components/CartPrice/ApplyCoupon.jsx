@@ -69,7 +69,8 @@ const ApplyCoupon = ({ setShowCouponModal, totalPrice }) => {
               type="radio"
               name="coupon"
               disabled={totalPrice < coupon.minPrice}
-              checked={selectedCoupon.minPrice === coupon.minPrice}
+              checked={selectedCoupon.id === coupon.id} // Change this line
+              // checked={selectedCoupon.minPrice === coupon.minPrice}
               onChange={() => setSelectedCoupon(coupon)}
               className="text-blue-500"
             />

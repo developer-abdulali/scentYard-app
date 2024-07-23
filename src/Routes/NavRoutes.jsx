@@ -31,18 +31,18 @@ const NavRoutes = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:productId" element={<SingleProduct />} />
 
-        <Route element={<PrivateRoute />}>
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/order/:orderId" element={<OrderSummary />} />
+        {/* <Route element={<PrivateRoute />}> */}
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order/:orderId" element={<OrderSummary />} />
 
-          <Route path="/profile" element={<UserAccount />}>
-            <Route path="" element={<UserProfile />} />
-            <Route path="orders" element={<OrderList />} />
-            <Route path="addresses" element={<AddressList />} />
-          </Route>
+        <Route path="/profile" element={<UserAccount />}>
+          <Route path="" element={<UserProfile />} />
+          <Route path="orders" element={<OrderList />} />
+          <Route path="addresses" element={<AddressList />} />
         </Route>
+        {/* </Route> */}
 
         {!isAuth ? (
           <>
